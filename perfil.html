@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Carolina Ribeiro | Medicina Fetal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@700&family=Bricolage+Grotesque:wght@800&family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+/* Remove espaço entre header e hero */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f5f0e8;  /* mesmo tom do hero — sem contraste de cor */
+  color: #223047;
+  line-height: 1.6;
+}
+
+/* Garante que o hero encoste no header */
+.hero-perfil {
+  margin-top: 0;
+}
+.container{
+max-width:1320px;
+margin:auto;
+padding:0 40px;
+}
+/* ══════════════════════════════════
+   HEADER / MENU — Estilo Premium
+   ══════════════════════════════════ */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(13, 27, 42, 0.08);
+}
+
+.header-inner {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+/* ── Logo ── */
+.logo-link {
+    text-decoration: none;
+    flex-shrink: 0;
+    line-height: 0;
+}
+
+.logo-img {
+    height: 52px;
+    width: auto;
+    display: block;
+}
+
+/* ── Nav links (desktop) ── */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.main-nav a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D1B2A;
+    letter-spacing: -0.1px;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+/* Sublinhado animado no hover */
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #D4805C;
+    border-radius: 2px;
+    transition: width 0.3s;
+}
+
+.main-nav a:hover { color: #D4805C; }
+.main-nav a:hover::after { width: 100%; }
+
+/* Submenu Especialidades */
+.nav-item-with-submenu {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-item-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D1B2A;
+    letter-spacing: -0.1px;
+    transition: color 0.3s;
+    white-space: nowrap;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.nav-item-toggle::after {
+    content: "▼";
+    font-size: 9px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item-toggle:hover {
+    color: #D4805C;
+}
+
+.nav-item-toggle:hover::after {
+    transform: rotateZ(180deg);
+}
+
+.nav-item-toggle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #D4805C;
+    border-radius: 2px;
+    transition: width 0.3s;
+}
+
+.nav-item-with-submenu:hover .nav-item-toggle::before {
+    width: 100%;
+}
+
+.submenu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    min-width: 180px;
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    z-index: 200;
+}
+
+.nav-item-with-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.submenu a {
+    display: block;
+    padding: 11px 16px;
+    color: #0D1B2A;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: background-color 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+
+.submenu a:first-child {
+    border-radius: 7px 7px 0 0;
+}
+
+.submenu a:last-child {
+    border-radius: 0 0 7px 7px;
+}
+
+.submenu a:hover {
+    background-color: #f5f0e8;
+    color: #D4805C;
+}
+
+/* Link CTA mobile — oculto no desktop */
+.mobile-nav-cta { display: none; }
+
+/* ── Botão CTA desktop ── */
+.header-cta {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 26px;
+    background: #0D1B2A;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 999px;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(13, 27, 42, 0.18);
+    white-space: nowrap;
+}
+
+.header-cta:hover {
+    background: #D4805C;
+    box-shadow: 0 10px 28px rgba(212, 128, 92, 0.35);
+    transform: translateY(-1px);
+}
+
+/* ── Hambúrguer ── */
+.mobile-menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(13, 27, 42, 0.12);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.7);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    z-index: 200;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 21px;
+    height: 2px;
+    border-radius: 99px;
+    background: #0D1B2A;
+    transition: 0.3s;
+}
+
+.mobile-menu-toggle:hover {
+    background: white;
+    box-shadow: 0 8px 24px rgba(13, 27, 42, 0.1);
+}
+
+/* Animação X */
+.mobile-menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.mobile-menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+.mobile-menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ══════════════════════════════════
+   RESPONSIVO DO HEADER
+   ══════════════════════════════════ */
+@media (max-width: 960px) {
+    .header-inner {
+        height: 70px;
+        position: relative;
+    }
+    .logo-img { height: 44px; }
+    .mobile-menu-toggle { display: flex; }
+    .header-cta { display: none; }
+
+    /* Dropdown flutuante */
+    .main-nav {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px;
+        border: 1px solid rgba(13, 27, 42, 0.1);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 20px 50px rgba(13, 27, 42, 0.14);
+        backdrop-filter: blur(14px);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        pointer-events: none;
+        transition: 0.25s;
+        z-index: 150;
+    }
+
+    .main-nav.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .main-nav a {
+        padding: 14px 16px;
+        border-radius: 12px;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-nav a:hover {
+        background: #fdf6f2;
+        color: #D4805C;
+    }
+
+    .main-nav a::after { display: none; }
+
+    /* CTA visível no final do menu mobile */
+    .mobile-nav-cta {
+        display: flex !important;
+        margin-top: 8px;
+        justify-content: center;
+        background: #0D1B2A !important;
+        color: white !important;
+        font-weight: 700 !important;
+        border-radius: 12px !important;
+    }
+    .mobile-nav-cta:hover {
+        background: #D4805C !important;
+    }
+}
+
+/* === VARIÁVEIS DO TEMA DA DRA. CAROLINA === */
+:root {
+  --coral:        #F69874;   /* cor primária / botão */
+  --coral-escuro: #D98C6E;   /* hover / links */
+  --topo-escuro:  #3F444B;   /* top bar */
+  --texto:        #777777;   /* texto corpo */
+  --titulo:       #222222;   /* títulos */
+  --branco:       #FFFFFF;
+}
+
+/* === HERO === */
+.hero-perfil {
+  position: relative;
+  min-height: 760px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 100px 0 40px;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(63, 68, 75, 0.92) 0%,
+      rgba(63, 68, 75, 0.75) 35%,
+      rgba(63, 68, 75, 0.35) 60%,
+      rgba(63, 68, 75, 0.05) 100%
+    ),
+    url('https://www.crmedicinafetal.com/wp-content/uploads/2026/06/ChatGPT-Image-23-de-jun.-de-2026-17_31_55.png');
+  background-size: cover;
+  background-position: right center;
+}
+
+/* Container */
+.container {
+  width: min(1180px, 100% - 40px);
+  margin-inline: auto;
+}
+
+/* Conteúdo do hero */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(620px, 100%);
+  padding-top: 20px;
+}
+
+/* Badge pill */
+.hero-perfil .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(7px);
+  color: white;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 22px;
+}
+
+/* Ponto animado do badge */
+.hero-perfil .badge span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--coral);
+  box-shadow: rgba(246, 152, 116, 0.4) 0px 0px 0px 6px;
+  flex-shrink: 0;
+}
+
+/* Título */
+.hero-perfil h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 800;
+  color: white;
+  max-width: 600px;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+/* Descrição */
+.hero-perfil p {
+  font-family: 'Poppins', sans-serif;
+  color: rgba(255, 255, 255, 0.90);
+  font-size: 17px;
+  font-weight: 300;
+  max-width: 560px;
+  line-height: 1.65;
+  margin-bottom: 32px;
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 999px;
+  padding: 14px 26px;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--coral);
+  color: white;
+  box-shadow: rgba(246, 152, 116, 0.35) 0px 12px 30px;
+}
+.btn-primary:hover {
+  background: var(--coral-escuro);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+.btn-outline:hover {
+  background: white;
+  color: var(--topo-escuro);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+  .hero-perfil {
+    min-height: 100svh;
+    background-position: 70% center;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(63, 68, 75, 0.88) 0%,
+        rgba(63, 68, 75, 0.75) 100%
+      ),
+      url('https://www.crmedicinafetal.com/wp-content/uploads/2026/06/ChatGPT-Image-23-de-jun.-de-2026-17_31_55.png');
+  }
+  .hero-perfil h1 { font-size: clamp(28px, 8vw, 40px); }
+  .hero-perfil p   { font-size: 15px; }
+  .hero-actions    { flex-direction: column; }
+  .btn             { width: 100%; justify-content: center; }
+}
+
+/* ============================
+   SEÇÃO DE FORMAÇÃO
+============================= */
+.formacao-section {
+  background-color: #f5ede4;
+  padding: 60px 40px;
+  font-family: 'Hind', 'Montserrat', sans-serif;
+}
+
+.formacao-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* Esquerda ligeiramente maior que a foto para acomodar todo o conteúdo */
+  grid-template-columns: 52% 46%;
+  gap: 2%;
+  align-items: stretch; /* ambas as colunas têm a mesma altura */
+}
+
+/* ============================
+   COLUNA ESQUERDA
+============================= */
+.formacao-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.formacao-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c87941;
+  margin-bottom: 6px;
+}
+
+/* Linha decorativa abaixo do label */
+.formacao-label::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background-color: #c87941;
+  margin-top: 6px;
+  opacity: 0.5;
+}
+
+.formacao-titulo {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: clamp(26px, 2.8vw, 38px);
+  font-weight: 400;
+  color: #1a1a2e;
+  line-height: 1.25;
+  margin: 14px 0 22px;
+}
+
+.formacao-titulo-destaque {
+  color: #c87941;
+  font-style: italic;
+}
+
+/* Lista de formação */
+.formacao-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex: 1;
+}
+
+.formacao-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  font-size: 12.5px;
+  color: #444;
+  line-height: 1.45;
+}
+
+.formacao-lista li:last-child {
+  border-bottom: none;
+}
+
+.check-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.check-icon svg {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+
+/* Card CRM */
+.formacao-crm-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-top: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.crm-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crm-info {
+  flex: 1;
+}
+
+.crm-numeros {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0 0 6px 0;
+}
+
+.crm-descricao {
+  font-size: 11.5px;
+  color: #666;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ============================
+   COLUNA DIREITA — FOTO
+   Ocupa toda a altura da seção
+============================= */
+.formacao-foto {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  /* Força a foto a ter a mesma altura total do conteúdo */
+  min-height: 100%;
+}
+
+.formacao-foto img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 14px;
+}
+
+/* ============================
+   RESPONSIVO — TABLET
+============================= */
+@media (max-width: 1024px) {
+  .formacao-container {
+    grid-template-columns: 55% 43%;
+    gap: 2%;
+  }
+
+  .formacao-titulo {
+    font-size: 28px;
+  }
+}
+
+/* ============================
+   RESPONSIVO — MOBILE
+============================= */
+@media (max-width: 768px) {
+  .formacao-section {
+    padding: 40px 20px;
+  }
+
+  .formacao-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Foto sobe para antes do conteúdo no mobile */
+  .formacao-foto {
+    order: -1;
+    min-height: 380px;
+    position: relative;
+  }
+
+  .formacao-foto img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .formacao-titulo {
+    font-size: 26px;
+  }
+
+  .formacao-lista li {
+    font-size: 12px;
+  }
+
+  .crm-numeros {
+    font-size: 12px;
+  }
+
+  .crm-descricao {
+    font-size: 11px;
+  }
+}
+
+/* SECTIONS */
+section{
+padding:120px 0;
+}
+h2{
+font-family:'Cormorant Garamond';
+font-size:60px;
+margin-bottom:30px;
+color:#0D1B2A;
+line-height:1.1;
+}
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+}
+.card{
+background:#fff;
+padding:40px;
+border-radius:24px;
+border:1px solid #ece8e1;
+margin-bottom:25px;
+}
+.card i{
+font-size:38px;
+color:#c57b54;
+margin-bottom:20px;
+}
+.card h3{
+margin-bottom:15px;
+color:#0D1B2A;
+}
+
+/* LISTA */
+.lista{
+list-style:none;
+}
+.lista li{
+margin-bottom:25px;
+display:flex;
+gap:18px;
+line-height:1.8;
+color:#5f6670;
+}
+.lista i{
+color:#c57b54;
+margin-top:5px;
+flex-shrink:0;
+}
+
+/* ATUAÇÃO */
+.box{
+background:white;
+padding:50px;
+border-radius:28px;
+border:1px solid #ece8e1;
+}
+.box h3{
+color:#0D1B2A;
+margin-bottom:20px;
+font-size:18px;
+}
+.box p{
+color:#5f6670;
+margin-bottom:30px;
+}
+.box ul{
+list-style:none;
+}
+.box li{
+display:flex;
+gap:15px;
+margin-bottom:20px;
+color:#5f6670;
+line-height:1.8;
+}
+.box i{
+color:#c57b54;
+margin-top:3px;
+}
+
+/* CTA */
+.cta{
+background:#fff;
+border-radius:30px;
+overflow:hidden;
+display:grid;
+grid-template-columns:1fr 1fr;
+border:1px solid #ece8e1;
+}
+.cta img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+.cta-texto{
+padding:90px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+.cta-texto h2{
+font-size:56px;
+margin-bottom:20px;
+}
+.cta-texto p{
+font-size:18px;
+color:#5f6670;
+line-height:1.8;
+}
+
+/* FOOTER */
+/* ========================
+   FOOTER PRINCIPAL
+======================== */
+.site-footer {
+    background-color: #0d1b2e;
+    color: #ffffff;
+    padding: 60px 40px 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Divisor vertical */
+.footer-divider {
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 1px;
+    align-self: stretch;
+    min-height: 200px;
+}
+
+/* ========================
+   COLUNA: LOGO + SLOGAN
+======================== */
+.footer-brand .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.footer-brand .logo-wrapper img {
+    height: 80px;
+    width: auto;
+}
+
+.footer-brand .logo-text {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 14px;
+    line-height: 1.7;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.footer-brand .tagline {
+    font-size: 13px;
+    color: #c0cce0;
+    line-height: 1.6;
+    max-width: 220px;
+}
+
+/* ========================
+   COLUNAS DE LINKS
+======================== */
+.footer-col h4 {
+    color: #e8825a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: #e8825a;
+}
+
+/* ========================
+   COLUNA: CONTATO
+======================== */
+.footer-contact h4 {
+    color: #e8825a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-contact .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.footer-contact .contact-item .icon {
+    color: #e8825a;
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.footer-contact .contact-item strong {
+    font-weight: 600;
+}
+
+/* ========================
+   COLUNA: REDES SOCIAIS
+======================== */
+.footer-social h4 {
+    color: #e8825a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #e8825a;
+    color: #e8825a;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.social-icons a:hover {
+    background-color: #e8825a;
+    color: #ffffff;
+}
+
+/* SVG icons inline */
+.social-icons svg {
+    width: 20px;
+    height: 20px;
+    fill: #e8825a;
+    transition: fill 0.2s;
+}
+
+.social-icons a:hover svg {
+    fill: #ffffff;
+}
+
+/* ========================
+   FOOTER BOTTOM BAR
+======================== */
+.footer-bottom {
+    background-color: #091523;
+    padding: 18px 40px;
+}
+
+.footer-bottom-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #8899aa;
+}
+
+.footer-bottom-inner .credit a {
+    color: #e8825a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-bottom-inner .credit a:hover {
+    text-decoration: underline;
+}
+
+/* ========================
+   RESPONSIVO – MOBILE
+======================== */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 40px 24px 30px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    .footer-brand .logo-wrapper {
+        margin-bottom: 16px;
+    }
+
+    .footer-brand .tagline {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        padding: 16px 24px;
+    }
+
+    .footer-bottom-inner {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+    .nav {
+        padding: 0;
+    }
+    .hero {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 50px;
+    }
+    .left {
+        padding-right: 0;
+    }
+    h1 {
+        font-size: 56px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .cta {
+        grid-template-columns: 1fr;
+    }
+    .cta-texto {
+        padding: 60px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    .header-top-left {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .nav {
+        flex-wrap: wrap;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    .logo {
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+    }
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 20px;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    .btn {
+        grid-column: 1 / -1;
+        justify-self: center;
+        padding: 14px 24px;
+        font-size: 13px;
+    }
+    .hero {
+        padding: 60px 0;
+        gap: 40px;
+    }
+    h1 {
+        font-size: 42px;
+    }
+    .desc {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 42px;
+    }
+    .grid {
+        gap: 40px;
+    }
+    .cta-texto {
+        padding: 40px;
+    }
+    .cta-texto h2 {
+        font-size: 36px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    section {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-top {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+    .nav {
+        padding: 12px 15px;
+    }
+    .menu {
+        gap: 10px 12px;
+    }
+    .menu a {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    .assinatura {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    .grid {
+        gap: 30px;
+    }
+    .card {
+        padding: 30px;
+    }
+    .cta-texto {
+        padding: 30px;
+    }
+    .cta-texto h2 {
+        font-size: 28px;
+    }
+    section {
+        padding: 60px 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER PREMIUM -->
+<header>
+    <div class="container">
+        <div class="header-inner">
+            <a href="index.html" class="logo-link">
+                <img src="https://www.crmedicinafetal.com/wp-content/uploads/2024/10/cr-medicina-fetal-logo-peq.webp" alt="CR Medicina Fetal" class="logo-img">
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Home</a>
+                <a href="clinica.html">Clínica</a>
+                <a href="perfil.html">Sobre a Dra.</a>
+                <div class="nav-item-with-submenu">
+                    <a href="#" class="nav-item-toggle">Especialidades</a>
+                    <div class="submenu">
+                        <a href="ginecologia.html">Ginecologia</a>
+                        <a href="obstetricia.html">Obstetrícia</a>
+                        <a href="medicina-fetal.html">Medicina Fetal</a>
+                    </div>
+                </div>
+                <a href="exames.html">Exames</a>
+                <a href="contato.html">Contato</a>
+                <a href="blog.html">Blog</a>
+                <a href="contato.html" class="mobile-nav-cta">Agendar Consulta</a>
+            </nav>
+
+            <a href="#contato" class="header-cta">📅 Agendar Consulta</a>
+
+            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+    </header>
+
+    <script>
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.main-nav');
+
+        if (toggle) {
+            toggle.addEventListener('click', () => {
+                toggle.classList.toggle('is-open');
+                nav.classList.toggle('is-open');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('header')) {
+                    toggle.classList.remove('is-open');
+                    nav.classList.remove('is-open');
+                }
+            });
+        }
+
+        // Menu mobile toggle with IDs
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('is-open');
+                mainNav.classList.toggle('is-open');
+            });
+            mainNav.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => {
+                    menuToggle.classList.remove('is-open');
+                    mainNav.classList.remove('is-open');
+                });
+            });
+        }
+    </script>
+
+    <!-- === HERO PERFIL — Dark Theme === -->
+<section id="inicio" class="hero-perfil" aria-labelledby="hero-titulo">
+  <div class="container">
+    <div class="hero-content">
+      <div class="badge">
+        <span></span>
+        MEDICINA FETAL · GINECOLOGIA · OBSTETRÍCIA
+      </div>
+      <h1 id="hero-titulo">Cuidado especializado para você e seu bebê</h1>
+      <p>Atendimento humanizado e de alta complexidade em medicina fetal, ginecologia e obstetrícia no Rio de Janeiro.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/5521970737523" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.75 2.25A8.97 8.97 0 003.75 15.75l-1.5 3 3-1.5A8.97 8.97 0 0015.75 2.25zm-8.25 13.5c-2.85 0-5.55-1.425-7.125-3.675l-.75-.9.9.225A7.5 7.5 0 0015.75 3.75l.225.9-.9-.75c-2.25 1.575-3.675 4.275-3.675 7.125 0 1.575.45 3.075 1.35 4.35l.675.9-.9-.225z"/>
+          </svg>
+          Agendar consulta
+        </a>
+        <a href="#sobre" class="btn btn-outline">Conheça meu perfil</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     SEÇÃO: FORMAÇÃO ACADÊMICA
+============================= -->
+<section class="formacao-section">
+  <div class="formacao-container">
+    <!-- COLUNA ESQUERDA: CONTEÚDO -->
+    <div class="formacao-content">
+      <span class="formacao-label">FORMAÇÃO</span>
+      <h2 class="formacao-titulo">
+        Excelência acadêmica<br />
+        <span class="formacao-titulo-destaque">a serviço da vida</span>
+      </h2>
+      <ul class="formacao-lista">
+        <li>
+          <span class="check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#c87941" stroke-width="1.5"/><path d="M7.5 12.5l3 3 6-6" fill="none" stroke="#c87941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Graduação em Medicina pela Faculdade de Medicina do ABC.</span>
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#c87941" stroke-width="1.5"/><path d="M7.5 12.5l3 3 6-6" fill="none" stroke="#c87941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Residência Médica em Ginecologia e Obstetrícia pela Faculdade de Medicina do ABC.</span>
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#c87941" stroke-width="1.5"/><path d="M7.5 12.5l3 3 6-6" fill="none" stroke="#c87941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Especialização em Medicina Fetal pela Fetal Medicina Diagnóstica.</span>
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#c87941" stroke-width="1.5"/><path d="M7.5 12.5l3 3 6-6" fill="none" stroke="#c87941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Especialização em Ultrassonografia em Ginecologia e Obstetrícia pelo Cetrus – Centro de Ensino e Treinamento em Ultrassonografia.</span>
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#c87941" stroke-width="1.5"/><path d="M7.5 12.5l3 3 6-6" fill="none" stroke="#c87941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Pós-graduação Lato Sensu em Medicina Fetal pela Fetalmed Medicina Diagnóstica.</span>
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#c87941" stroke-width="1.5"/><path d="M7.5 12.5l3 3 6-6" fill="none" stroke="#c87941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Título de Especialista em Ginecologia e Obstetrícia (TEGO) pela FEBRASGO.</span>
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#c87941" stroke-width="1.5"/><path d="M7.5 12.5l3 3 6-6" fill="none" stroke="#c87941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Título de Especialista em Medicina Fetal (TMF) pela FMB.</span>
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#c87941" stroke-width="1.5"/><path d="M7.5 12.5l3 3 6-6" fill="none" stroke="#c87941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Membro da International Society of Ultrasound in Obstetrics and Gynecology (ISUOG).</span>
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#c87941" stroke-width="1.5"/><path d="M7.5 12.5l3 3 6-6" fill="none" stroke="#c87941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Membro da Sociedade Brasileira de Medicina Fetal (SBMF).</span>
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#c87941" stroke-width="1.5"/><path d="M7.5 12.5l3 3 6-6" fill="none" stroke="#c87941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Membro da Sociedade Brasileira de Ultrassonografia (SBUS).</span>
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#c87941" stroke-width="1.5"/><path d="M7.5 12.5l3 3 6-6" fill="none" stroke="#c87941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Membro da Febrasgo.</span>
+        </li>
+      </ul>
+      <!-- CARD CRM -->
+      <div class="formacao-crm-card">
+        <div class="crm-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#c87941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div class="crm-info">
+          <p class="crm-numeros"><strong>CRM SP 194.635</strong> &nbsp;|&nbsp; <strong>RQE 63806</strong></p>
+          <p class="crm-descricao">Médica especialista em Medicina Fetal e Gestação de Alto Risco, com sólida formação e experiência no cuidado integral da mãe e do bebê.</p>
+        </div>
+      </div>
+    </div><!-- /formacao-content -->
+    <!-- COLUNA DIREITA: FOTO -->
+    <div class="formacao-foto">
+      <img
+        src="https://www.crmedicinafetal.com/wp-content/uploads/2026/06/Dra-Carol-na-Mesa-Blusa-Verde.png"
+        alt="Dra. Carolina Ribeiro"
+      />
+    </div>
+  </div><!-- /formacao-container -->
+</section>
+
+<!-- ATUAÇÃO -->
+<section class="container">
+<h2>Atuação em Medicina Fetal</h2>
+<p style="font-size:18px;color:#5f6670;margin-bottom:40px;max-width:800px;">Acompanho gestações que exigem atenção especial com responsabilidade, conhecimento e tecnologia de ponta para garantir o melhor cuidado para mãe e bebê.</p>
+<div class="grid">
+<div class="box">
+<h3>Área de Atuação</h3>
+<ul class="lista" style="margin:0;padding:0;">
+<li><i class="fa-solid fa-circle-check"></i>Medicina Fetal e Ginecologia e Obstetrícia</li>
+<li><i class="fa-solid fa-circle-check"></i>Atuação em gestação de alto risco</li>
+<li><i class="fa-solid fa-circle-check"></i>Diagnóstico e acompanhamento de malformações fetais</li>
+</ul>
+</div>
+<div class="box">
+<h3>Serviços Especializados</h3>
+<ul class="lista" style="margin:0;padding:0;">
+<li><i class="fa-solid fa-circle-check"></i>Ultrassonografia obstétrica</li>
+<li><i class="fa-solid fa-circle-check"></i>Intervenções fetais (quando indicadas)</li>
+<li><i class="fa-solid fa-circle-check"></i>Aconselhamento e apoio individualizado às famílias</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="container" style="padding-top:60px;padding-bottom:0;">
+<div class="cta">
+<img src="https://www.crmedicinafetal.com/wp-content/uploads/2024/10/consultorio-dra-carolina.jpg" alt="Consultório">
+<div class="cta-texto">
+<h2>Agende sua consulta</h2>
+<p>Entre em contato conosco e agende uma consulta. Estou à disposição para esclarecer dúvidas e oferecer o melhor atendimento para você e seu bebê.</p>
+<div style="margin-top:30px;">
+    <a href="https://wa.me/5521970737523" class="btn">Fale no WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="site-footer">
+        <div class="footer-container">
+            <!-- LOGO + SLOGAN -->
+            <div class="footer-brand">
+                <div class="logo-wrapper">
+                    <img src="https://www.crmedicinafetal.com/wp-content/uploads/2019/01/cr-medicina-fetal-logo-peq.png" alt="CR Medicina Fetal Logo">
+                    <div class="logo-text">
+                        Medicina Fetal<br>
+                        Ginecologia<br>
+                        Obstetrícia
+                    </div>
+                </div>
+                <p class="tagline">Excelência no diagnóstico, tecnologia e cuidado para sua gestação.</p>
+            </div>
+
+            <!-- DIVISOR VERTICAL -->
+            <div class="footer-divider"></div>
+
+            <!-- NAVEGAÇÃO -->
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="perfil.html">Perfil</a></li>
+                    <li><a href="clinica.html">Clínica</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+
+            <!-- ESPECIALIDADES -->
+            <div class="footer-col">
+                <h4>Especialidades</h4>
+                <ul>
+                    <li><a href="ginecologia.html">Ginecologia</a></li>
+                    <li><a href="obstetricia.html">Obstetrícia</a></li>
+                    <li><a href="medicina-fetal.html">Medicina Fetal</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTATO -->
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <div class="contact-item">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8825a" width="20" height="20">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                        </svg>
+                    </span>
+                    <div>
+                        <strong>Via Parque Comfort Working</strong><br>
+                        Av. Ayrton Senna, 3000<br>
+                        Bloco Grumari, Sala 3032<br>
+                        CEP: 22775904<br>
+                        Rio de Janeiro - Brasil
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8825a" width="20" height="20">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </span>
+                    <div>
+                        <strong>E-mail:</strong> contato@crmedicinafetal.com.br
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8825a" width="20" height="20">
+                            <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"/>
+                        </svg>
+                    </span>
+                    <div>
+                        <strong>Tel:</strong> +55 21 3268-5194<br>
+                        +55 21 97073-7523
+                    </div>
+                </div>
+            </div>
+
+            <!-- REDES SOCIAIS -->
+            <div class="footer-social">
+                <h4>Onde nos encontrar</h4>
+                <div class="social-icons">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/dra.carolinaribeiro/" target="_blank" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.516 2.497 5.783 2.226 7.149 2.163 8.416 2.105 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038C23.986 15.668 24 15.259 24 12s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                        </svg>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/Dracarolinaribeiro-131122297582802/" target="_blank" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+            <span>© 2024 CR Medicina Fetal. Todos os direitos reservados.</span>
+            <span class="credit">Desenvolvido por <a href="#">CR Medicina Fetal</a></span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

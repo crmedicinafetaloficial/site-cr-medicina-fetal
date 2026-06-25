@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica - CR Medicina Fetal</title>
+    <meta name="description" content="Conheça a Dra. Carolina Ribeiro e a clínica CR Medicina Fetal">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Poppins:wght@300;400;800&family=Montserrat:wght@400;600&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Hind:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #E8825D;
+            --secondary-color: #2C3E50;
+            --light-gray: #F8F9FA;
+            --dark-gray: #333;
+            --border-color: #E0E0E0;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+
+        .container {
+            width: min(1180px, 100% - 40px);
+            margin-inline: auto;
+            padding: 0;
+        }
+
+        /* ══════════════════════════════════
+           HEADER / MENU — Estilo Premium
+           ══════════════════════════════════ */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(13, 27, 42, 0.08);
+        }
+
+        .header-inner {
+            height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        /* ── Logo ── */
+        .logo-link {
+            text-decoration: none;
+            flex-shrink: 0;
+            line-height: 0;
+        }
+
+        .logo-img {
+            height: 52px;
+            width: auto;
+            display: block;
+        }
+
+        /* ── Nav links (desktop) ── */
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+        }
+
+        .main-nav a {
+            position: relative;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #0D1B2A;
+            letter-spacing: -0.1px;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+
+        /* Sublinhado animado no hover */
+        .main-nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: #D4805C;
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+
+        .main-nav a:hover { color: #D4805C; }
+        .main-nav a:hover::after { width: 100%; }
+
+        /* Submenu Especialidades */
+        .nav-item-with-submenu {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-item-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #0D1B2A;
+            letter-spacing: -0.1px;
+            transition: color 0.3s;
+            white-space: nowrap;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .nav-item-toggle::after {
+            content: "▼";
+            font-size: 9px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item-toggle:hover {
+            color: #D4805C;
+        }
+
+        .nav-item-toggle:hover::after {
+            transform: rotateZ(180deg);
+        }
+
+        .nav-item-toggle::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: #D4805C;
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+
+        .nav-item-with-submenu:hover .nav-item-toggle::before {
+            width: 100%;
+        }
+
+        .submenu {
+            position: absolute;
+            top: calc(100% + 12px);
+            left: 0;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            min-width: 180px;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            z-index: 200;
+        }
+
+        .nav-item-with-submenu:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .submenu a {
+            display: block;
+            padding: 11px 16px;
+            color: #0D1B2A;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: background-color 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+
+        .submenu a:first-child {
+            border-radius: 7px 7px 0 0;
+        }
+
+        .submenu a:last-child {
+            border-radius: 0 0 7px 7px;
+        }
+
+        .submenu a:hover {
+            background-color: #f5f0e8;
+            color: #D4805C;
+        }
+
+        /* Link CTA mobile — oculto no desktop */
+        .mobile-nav-cta { display: none; }
+
+        /* ── Botão CTA desktop ── */
+        .header-cta {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 26px;
+            background: #0D1B2A;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 999px;
+            text-decoration: none;
+            letter-spacing: 0.01em;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(13, 27, 42, 0.18);
+            white-space: nowrap;
+        }
+
+        .header-cta:hover {
+            background: #D4805C;
+            box-shadow: 0 10px 28px rgba(212, 128, 92, 0.35);
+            transform: translateY(-1px);
+        }
+
+        /* ── Hambúrguer ── */
+        .mobile-menu-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(13, 27, 42, 0.12);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.7);
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            appearance: none;
+            -webkit-appearance: none;
+            position: relative;
+            z-index: 200;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            width: 21px;
+            height: 2px;
+            border-radius: 99px;
+            background: #0D1B2A;
+            transition: 0.3s;
+        }
+
+        .mobile-menu-toggle:hover {
+            background: white;
+            box-shadow: 0 8px 24px rgba(13, 27, 42, 0.1);
+        }
+
+        /* Animação X */
+        .mobile-menu-toggle.is-open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .mobile-menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+        .mobile-menu-toggle.is-open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* ══════════════════════════════════
+           RESPONSIVO DO HEADER
+           ══════════════════════════════════ */
+        @media (max-width: 960px) {
+            .header-inner {
+                height: 70px;
+                position: relative;
+            }
+            .logo-img { height: 44px; }
+            .mobile-menu-toggle { display: flex; }
+            .header-cta { display: none; }
+
+            /* Dropdown flutuante */
+            .main-nav {
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 10px;
+                border: 1px solid rgba(13, 27, 42, 0.1);
+                border-radius: 20px;
+                background: rgba(255, 255, 255, 0.98);
+                box-shadow: 0 20px 50px rgba(13, 27, 42, 0.14);
+                backdrop-filter: blur(14px);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-8px);
+                pointer-events: none;
+                transition: 0.25s;
+                z-index: 150;
+            }
+
+            .main-nav.is-open {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+
+            .main-nav a {
+                padding: 14px 16px;
+                border-radius: 12px;
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .main-nav a:hover {
+                background: #fdf6f2;
+                color: #D4805C;
+            }
+
+            .main-nav a::after { display: none; }
+
+            /* CTA visível no final do menu mobile */
+            .mobile-nav-cta {
+                display: flex !important;
+                margin-top: 8px;
+                justify-content: center;
+                background: #0D1B2A !important;
+                color: white !important;
+                font-weight: 700 !important;
+                border-radius: 12px !important;
+            }
+            .mobile-nav-cta:hover {
+                background: #D4805C !important;
+            }
+        }
+
+        /* BREADCRUMB */
+        .breadcrumb {
+            background-color: var(--light-gray);
+            padding: 15px 40px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* ==============================
+           HERO – CLÍNICA
+        ============================== */
+        .clinica-hero {
+          position: relative;
+          width: 100%;
+          height: 88vh;
+          min-height: 520px;
+          max-height: 780px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+        }
+
+        /* --- Foto de fundo --- */
+        .clinica-hero__bg {
+          position: absolute;
+          inset: 0;
+          background-image: url('https://www.crmedicinafetal.com/wp-content/uploads/2026/06/Sala-Hero-Clinica.png');
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          z-index: 0;
+        }
+
+        /* --- Overlay degradê: escuro à esquerda, transparente à direita --- */
+        .clinica-hero__overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to right,
+            rgba(58, 38, 28, 0.82) 0%,
+            rgba(58, 38, 28, 0.70) 30%,
+            rgba(58, 38, 28, 0.40) 60%,
+            rgba(58, 38, 28, 0.05) 100%
+          );
+          z-index: 1;
+        }
+
+        /* --- Conteúdo posicionado à esquerda --- */
+        .clinica-hero__content {
+          position: relative;
+          z-index: 2;
+          max-width: 1200px;
+          width: 100%;
+          margin: 0 auto;
+          padding: 0 48px;
+          /* Limita o texto a ~50% da largura */
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+        }
+
+        /* --- Título principal --- */
+        .clinica-hero__title {
+          font-family: 'Georgia', 'Times New Roman', serif;
+          font-size: clamp(26px, 3.2vw, 46px);
+          font-weight: 400;
+          color: #ffffff;
+          line-height: 1.25;
+          margin: 0;
+          max-width: 520px;
+          text-shadow: 0 1px 6px rgba(0,0,0,0.25);
+        }
+
+        /* --- Subtítulo --- */
+        .clinica-hero__subtitle {
+          font-family: 'Hind', 'Montserrat', sans-serif;
+          font-size: clamp(12px, 1.1vw, 14px);
+          color: rgba(255, 255, 255, 0.88);
+          line-height: 1.65;
+          margin: 0;
+          max-width: 400px;
+        }
+
+        /* --- Grupo de botões --- */
+        .clinica-hero__buttons {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          flex-wrap: wrap;
+          margin-top: 8px;
+        }
+
+        /* --- Botão base --- */
+        .clinica-hero__btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 11px 22px;
+          border-radius: 4px;
+          font-family: 'Hind', 'Montserrat', sans-serif;
+          font-size: 11.5px;
+          font-weight: 600;
+          letter-spacing: 0.8px;
+          text-transform: uppercase;
+          text-decoration: none;
+          cursor: pointer;
+          transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+        }
+
+        /* --- Botão 1: Agendar Consulta (outline claro) --- */
+        .clinica-hero__btn--primary {
+          color: #fff;
+          border: 1.5px solid rgba(255, 255, 255, 0.75);
+          background-color: transparent;
+        }
+
+        .clinica-hero__btn--primary:hover {
+          background-color: rgba(255, 255, 255, 0.18);
+          border-color: #fff;
+        }
+
+        /* --- Botão 2: WhatsApp (outline igual, leve tom verde) --- */
+        .clinica-hero__btn--whatsapp {
+          color: #fff;
+          border: 1.5px solid rgba(255, 255, 255, 0.75);
+          background-color: transparent;
+        }
+
+        .clinica-hero__btn--whatsapp:hover {
+          background-color: rgba(255, 255, 255, 0.18);
+          border-color: #fff;
+        }
+
+        /* ==============================
+           RESPONSIVO – TABLET
+        ============================== */
+        @media (max-width: 1024px) {
+          .clinica-hero {
+            height: 75vh;
+          }
+
+          .clinica-hero__content {
+            padding: 0 36px;
+          }
+
+          .clinica-hero__title {
+            max-width: 460px;
+          }
+        }
+
+        /* ==============================
+           RESPONSIVO – MOBILE
+        ============================== */
+        @media (max-width: 768px) {
+          .clinica-hero {
+            height: auto;
+            min-height: 100svh;
+            align-items: flex-end;
+          }
+
+          /* No mobile o overlay cobre mais a tela de baixo para cima */
+          .clinica-hero__overlay {
+            background: linear-gradient(
+              to top,
+              rgba(58, 38, 28, 0.90) 0%,
+              rgba(58, 38, 28, 0.65) 50%,
+              rgba(58, 38, 28, 0.10) 100%
+            );
+          }
+
+          .clinica-hero__content {
+            padding: 40px 24px 52px;
+            gap: 16px;
+          }
+
+          .clinica-hero__title {
+            font-size: 26px;
+            max-width: 100%;
+          }
+
+          .clinica-hero__subtitle {
+            font-size: 13px;
+            max-width: 100%;
+          }
+
+          .clinica-hero__buttons {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            width: 100%;
+          }
+
+          .clinica-hero__btn {
+            width: 100%;
+            justify-content: center;
+            padding: 13px 20px;
+            font-size: 12px;
+          }
+        }
+
+        /* ==============================
+           SEÇÃO: SOBRE A CLÍNICA
+        ============================== */
+        .sobre-clinica {
+          display: grid;
+          grid-template-columns: 52% 48%;
+          min-height: 560px;
+          background-color: #ffffff;
+          font-family: 'Hind', 'Montserrat', sans-serif;
+        }
+
+        /* ==============================
+           COLUNA ESQUERDA — FOTO
+           Sangra até a borda esquerda da tela
+        ============================== */
+        .sobre-clinica__foto {
+          position: relative;
+          overflow: hidden;
+          /* Sem padding/margin para sangrar até a borda */
+        }
+
+        .sobre-clinica__foto img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          display: block;
+        }
+
+        /* ==============================
+           COLUNA DIREITA — TEXTO
+        ============================== */
+        .sobre-clinica__texto {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 72px 64px 72px 72px;
+          background-color: #ffffff;
+        }
+
+        /* Label "SOBRE A CLÍNICA" */
+        .sobre-clinica__label {
+          display: block;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          color: #c87941;
+          margin-bottom: 20px;
+          position: relative;
+          padding-bottom: 10px;
+        }
+
+        /* Linha decorativa abaixo do label */
+        .sobre-clinica__label::after {
+          content: '';
+          display: block;
+          width: 28px;
+          height: 1.5px;
+          background-color: #c87941;
+          margin-top: 8px;
+          opacity: 0.6;
+        }
+
+        /* Título principal */
+        .sobre-clinica__titulo {
+          font-family: 'Georgia', 'Times New Roman', serif;
+          font-size: clamp(26px, 2.8vw, 42px);
+          font-weight: 400;
+          color: #1a1a2e;
+          line-height: 1.25;
+          margin: 0 0 32px 0;
+        }
+
+        /* Parágrafos */
+        .sobre-clinica__paragrafo {
+          font-size: 14px;
+          color: #666;
+          line-height: 1.75;
+          margin: 0 0 18px 0;
+          max-width: 460px;
+        }
+
+        .sobre-clinica__paragrafo:last-child {
+          margin-bottom: 0;
+        }
+
+        /* Palavra em destaque: "humanizado" */
+        .sobre-clinica__destaque {
+          font-weight: 700;
+          color: #c87941;
+          font-style: normal;
+        }
+
+        /* ==============================
+           RESPONSIVO — TABLET
+        ============================== */
+        @media (max-width: 1024px) {
+          .sobre-clinica {
+            grid-template-columns: 50% 50%;
+          }
+
+          .sobre-clinica__texto {
+            padding: 52px 40px;
+          }
+
+          .sobre-clinica__titulo {
+            font-size: 28px;
+          }
+        }
+
+        /* ==============================
+           RESPONSIVO — MOBILE
+        ============================== */
+        @media (max-width: 768px) {
+          .sobre-clinica {
+            grid-template-columns: 1fr;
+            min-height: auto;
+          }
+
+          /* Foto vai para cima no mobile */
+          .sobre-clinica__foto {
+            height: 280px;
+          }
+
+          .sobre-clinica__texto {
+            padding: 44px 24px;
+          }
+
+          .sobre-clinica__titulo {
+            font-size: 26px;
+            margin-bottom: 24px;
+          }
+
+          .sobre-clinica__paragrafo {
+            font-size: 13.5px;
+            max-width: 100%;
+          }
+        }
+
+        /* ==============================
+           SEÇÃO: AMBIENTE
+        ============================== */
+        .ambiente-section {
+          display: grid;
+          grid-template-columns: 38% 62%;
+          align-items: center;
+          background-color: #faf7f4;
+          padding: 80px 0 80px 60px;
+          font-family: 'Hind', 'Montserrat', sans-serif;
+          overflow: hidden;
+        }
+
+        /* ==============================
+           COLUNA ESQUERDA
+        ============================== */
+        .ambiente-texto {
+          padding-right: 48px;
+          position: relative;
+        }
+
+        .ambiente-label {
+          display: block;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          color: #c87941;
+          margin-bottom: 6px;
+        }
+
+        .ambiente-label::after {
+          content: '';
+          display: block;
+          width: 28px;
+          height: 1.5px;
+          background-color: #c87941;
+          margin-top: 7px;
+          opacity: 0.55;
+        }
+
+        .ambiente-titulo {
+          font-family: 'Georgia', 'Times New Roman', serif;
+          font-size: clamp(22px, 2.4vw, 34px);
+          font-weight: 400;
+          color: #1a1a2e;
+          line-height: 1.3;
+          margin: 18px 0 20px;
+        }
+
+        .ambiente-descricao {
+          font-size: 13px;
+          color: #777;
+          line-height: 1.75;
+          margin: 0;
+          max-width: 320px;
+        }
+
+        /* Ornamento decorativo */
+        .ambiente-ornamento {
+          margin-top: 36px;
+          width: 160px;
+          height: 160px;
+          opacity: 0.7;
+        }
+
+        .ambiente-ornamento svg {
+          width: 100%;
+          height: 100%;
+        }
+
+        /* ==============================
+           COLUNA DIREITA — GRADE
+        ============================== */
+        .ambiente-galeria {
+          padding-right: 0;
+        }
+
+        .galeria-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 260px 220px;
+          gap: 10px;
+          /* A grade sangra até a borda direita */
+          border-radius: 0;
+        }
+
+        /* Item padrão */
+        .galeria-item {
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+
+        .galeria-item img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+          transition: transform 0.45s ease;
+        }
+
+        /* Overlay ao hover */
+        .galeria-item__overlay {
+          position: absolute;
+          inset: 0;
+          background-color: rgba(58, 38, 28, 0);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background-color 0.3s ease;
+        }
+
+        .galeria-item__icone {
+          opacity: 0;
+          transform: scale(0.8);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+          background-color: rgba(200, 121, 65, 0.85);
+          border-radius: 50%;
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .galeria-item:hover img {
+          transform: scale(1.05);
+        }
+
+        .galeria-item:hover .galeria-item__overlay {
+          background-color: rgba(58, 38, 28, 0.28);
+        }
+
+        .galeria-item:hover .galeria-item__icone {
+          opacity: 1;
+          transform: scale(1);
+        }
+
+        /* ==============================
+           LIGHTBOX
+        ============================== */
+        .lightbox {
+          display: none;
+          position: fixed;
+          inset: 0;
+          background-color: rgba(10, 8, 6, 0.93);
+          z-index: 9999;
+          align-items: center;
+          justify-content: center;
+          padding: 24px;
+        }
+
+        .lightbox.ativo {
+          display: flex;
+        }
+
+        .lightbox__conteudo {
+          max-width: 90vw;
+          max-height: 88vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .lightbox__conteudo img {
+          max-width: 100%;
+          max-height: 88vh;
+          object-fit: contain;
+          border-radius: 6px;
+          box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+          user-select: none;
+        }
+
+        .lightbox__fechar {
+          position: absolute;
+          top: 20px;
+          right: 24px;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 8px;
+          opacity: 0.8;
+          transition: opacity 0.2s;
+          z-index: 10000;
+        }
+
+        .lightbox__fechar:hover { opacity: 1; }
+
+        .lightbox__nav {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(255,255,255,0.1);
+          border: 1px solid rgba(255,255,255,0.2);
+          border-radius: 50%;
+          width: 52px;
+          height: 52px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          opacity: 0.7;
+          transition: opacity 0.2s, background-color 0.2s;
+          z-index: 10000;
+        }
+
+        .lightbox__nav:hover {
+          opacity: 1;
+          background-color: rgba(200, 121, 65, 0.6);
+        }
+
+        .lightbox__nav--prev { left: 24px; }
+        .lightbox__nav--next { right: 24px; }
+
+        .lightbox__contador {
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          color: rgba(255,255,255,0.6);
+          font-family: 'Hind', sans-serif;
+          font-size: 13px;
+          letter-spacing: 1px;
+        }
+
+        /* ==============================
+           RESPONSIVO — TABLET
+        ============================== */
+        @media (max-width: 1024px) {
+          .ambiente-section {
+            grid-template-columns: 40% 60%;
+            padding: 60px 0 60px 40px;
+          }
+
+          .galeria-grid {
+            grid-template-rows: 220px 190px;
+          }
+        }
+
+        /* ==============================
+           RESPONSIVO — MOBILE
+        ============================== */
+        @media (max-width: 768px) {
+          .ambiente-section {
+            grid-template-columns: 1fr;
+            padding: 48px 24px;
+            gap: 36px;
+          }
+
+          .ambiente-texto {
+            padding-right: 0;
+          }
+
+          .ambiente-descricao {
+            max-width: 100%;
+          }
+
+          .ambiente-ornamento {
+            width: 110px;
+            height: 110px;
+          }
+
+          .galeria-grid {
+            grid-template-rows: 180px 180px;
+            gap: 8px;
+          }
+
+          .lightbox__nav--prev { left: 8px; }
+          .lightbox__nav--next { right: 8px; }
+        }
+
+        /* ==============================
+           SEÇÃO: TECNOLOGIA — efeito tira
+        ============================== */
+        .tecnologia-section {
+          display: grid;
+          grid-template-columns: 40% 60%;
+          height: 320px;
+          background-color: #faf7f4;
+          font-family: 'Hind', 'Montserrat', sans-serif;
+          overflow: hidden;
+        }
+
+        .tecnologia-foto {
+          position: relative;
+          overflow: hidden;
+          height: 100%;
+        }
+
+        .tecnologia-foto img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          display: block;
+        }
+
+        .tecnologia-texto {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 28px 52px 28px 56px;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        .tecnologia-label {
+          display: block;
+          font-size: 9.5px;
+          font-weight: 700;
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          color: #c87941;
+          margin-bottom: 4px;
+        }
+
+        .tecnologia-label::after {
+          content: '';
+          display: block;
+          width: 24px;
+          height: 1.5px;
+          background-color: #c87941;
+          margin-top: 5px;
+          opacity: 0.55;
+        }
+
+        .tecnologia-titulo {
+          font-family: 'Georgia', 'Times New Roman', serif;
+          font-size: clamp(18px, 1.9vw, 26px);
+          font-weight: 400;
+          color: #1a1a2e;
+          line-height: 1.28;
+          margin: 10px 0 12px;
+        }
+
+        .tecnologia-paragrafo {
+          font-size: 11.5px;
+          color: #777;
+          line-height: 1.65;
+          margin: 0 0 8px 0;
+          max-width: 420px;
+        }
+
+        .tecnologia-paragrafo:last-of-type {
+          margin-bottom: 16px;
+        }
+
+        /* Diferenciais compactados */
+        .tecnologia-diferenciais {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          padding-top: 14px;
+          border-top: 1px solid rgba(0,0,0,0.07);
+        }
+
+        .diferencial-item {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+        }
+
+        .diferencial-icone {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(200, 121, 65, 0.08);
+          border-radius: 6px;
+          flex-shrink: 0;
+        }
+
+        .diferencial-icone svg {
+          width: 15px;
+          height: 15px;
+        }
+
+        .diferencial-texto {
+          font-size: 10.5px;
+          color: #555;
+          line-height: 1.45;
+          margin: 0;
+          font-weight: 500;
+        }
+
+        /* Tablet */
+        @media (max-width: 1024px) {
+          .tecnologia-section {
+            height: auto;
+            grid-template-columns: 42% 58%;
+          }
+          .tecnologia-foto { height: 320px; }
+          .tecnologia-texto { padding: 28px 28px 28px 36px; }
+          .tecnologia-diferenciais { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+          .tecnologia-section { grid-template-columns: 1fr; height: auto; }
+          .tecnologia-foto { height: 220px; }
+          .tecnologia-texto { padding: 30px 24px; }
+          .tecnologia-titulo { font-size: 22px; }
+          .tecnologia-paragrafo { font-size: 12.5px; max-width: 100%; }
+          .tecnologia-diferenciais { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* ======================================================
+           FAIXA 2: EXPERIÊNCIA HUMANIZADA — tira estreita ~320px
+        ====================================================== */
+        .humanizada-section {
+          display: grid;
+          grid-template-columns: 42% 58%;
+          height: 320px;
+          background-color: #ffffff;
+          font-family: 'Hind', 'Montserrat', sans-serif;
+          overflow: hidden;
+        }
+
+        .humanizada-texto {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 28px 48px 28px 60px;
+          height: 100%;
+        }
+
+        .humanizada-label {
+          display: block;
+          font-size: 9.5px;
+          font-weight: 700;
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          color: #c87941;
+          margin-bottom: 4px;
+        }
+
+        .humanizada-label::after {
+          content: '';
+          display: block;
+          width: 24px;
+          height: 1.5px;
+          background-color: #c87941;
+          margin-top: 5px;
+          opacity: 0.55;
+        }
+
+        .humanizada-titulo {
+          font-family: 'Georgia', 'Times New Roman', serif;
+          font-size: clamp(20px, 2vw, 28px);
+          font-weight: 400;
+          color: #1a1a2e;
+          line-height: 1.28;
+          margin: 10px 0 14px;
+        }
+
+        .humanizada-paragrafo {
+          font-size: 11.5px;
+          color: #777;
+          line-height: 1.7;
+          margin: 0;
+          max-width: 360px;
+        }
+
+        .humanizada-foto {
+          position: relative;
+          overflow: hidden;
+          height: 100%;
+        }
+
+        .humanizada-foto img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          /* Centraliza na cena da consulta — mostra médica e paciente */
+          object-position: center 20%;
+          display: block;
+        }
+
+        /* Tablet */
+        @media (max-width: 1024px) {
+          .humanizada-section {
+            height: auto;
+            grid-template-columns: 44% 56%;
+          }
+          .humanizada-foto { height: 320px; }
+          .humanizada-texto { padding: 32px 32px 32px 44px; }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+          .humanizada-section { grid-template-columns: 1fr; height: auto; }
+          .humanizada-foto { order: -1; height: 220px; }
+          .humanizada-texto { padding: 32px 24px; }
+          .humanizada-titulo { font-size: 22px; }
+          .humanizada-paragrafo { font-size: 12.5px; max-width: 100%; }
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--white);
+            color: var(--dark-gray);
+            padding: 60px 40px 0;
+        }
+
+        /* ========================
+           FOOTER PRINCIPAL
+        ======================== */
+        .site-footer {
+            background-color: #0d1b2e;
+            color: #ffffff;
+            padding: 60px 40px 40px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Divisor vertical */
+        .footer-divider {
+            background-color: rgba(255, 255, 255, 0.15);
+            width: 1px;
+            align-self: stretch;
+            min-height: 200px;
+        }
+
+        /* ========================
+           COLUNA: LOGO + SLOGAN
+        ======================== */
+        .footer-brand .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .footer-brand .logo-wrapper img {
+            height: 80px;
+            width: auto;
+        }
+
+        .footer-brand .logo-text {
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            padding-left: 14px;
+            line-height: 1.7;
+            font-size: 13px;
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        .footer-brand .tagline {
+            font-size: 13px;
+            color: #c0cce0;
+            line-height: 1.6;
+            max-width: 220px;
+        }
+
+        /* ========================
+           COLUNAS DE LINKS
+        ======================== */
+        .footer-col h4 {
+            color: #e8825a;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #e8825a;
+        }
+
+        /* ========================
+           COLUNA: CONTATO
+        ======================== */
+        .footer-contact h4 {
+            color: #e8825a;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .footer-contact .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .footer-contact .contact-item .icon {
+            color: #e8825a;
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .footer-contact .contact-item strong {
+            font-weight: 600;
+        }
+
+        /* ========================
+           COLUNA: REDES SOCIAIS
+        ======================== */
+        .footer-social h4 {
+            color: #e8825a;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid #e8825a;
+            color: #e8825a;
+            text-decoration: none;
+            font-size: 20px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .social-icons a:hover {
+            background-color: #e8825a;
+            color: #ffffff;
+        }
+
+        /* SVG icons inline */
+        .social-icons svg {
+            width: 20px;
+            height: 20px;
+            fill: #e8825a;
+            transition: fill 0.2s;
+        }
+
+        .social-icons a:hover svg {
+            fill: #ffffff;
+        }
+
+        /* ========================
+           FOOTER BOTTOM BAR
+        ======================== */
+        .footer-bottom {
+            background-color: #091523;
+            padding: 18px 40px;
+        }
+
+        .footer-bottom-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #8899aa;
+        }
+
+        .footer-bottom-inner .credit a {
+            color: #e8825a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-bottom-inner .credit a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========================
+           RESPONSIVO – MOBILE
+        ======================== */
+        @media (max-width: 768px) {
+            .site-footer {
+                padding: 40px 24px 30px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-divider {
+                display: none;
+            }
+
+            .footer-brand .logo-wrapper {
+                margin-bottom: 16px;
+            }
+
+            .footer-brand .tagline {
+                max-width: 100%;
+            }
+
+            .footer-bottom {
+                padding: 16px 24px;
+            }
+
+            .footer-bottom-inner {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .profile-text h2 {
+                font-size: 24px;
+            }
+
+            .header-top {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+                font-size: 12px;
+            }
+
+            .header-top-left {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Poppins:wght@300;400;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER PREMIUM -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo-link">
+                    <img src="https://www.crmedicinafetal.com/wp-content/uploads/2024/10/cr-medicina-fetal-logo-peq.webp" alt="CR Medicina Fetal" class="logo-img">
+                </a>
+
+                <nav class="main-nav" id="mainNav">
+                    <a href="index.html">Home</a>
+                    <a href="clinica.html">Clínica</a>
+                    <a href="perfil.html">Sobre a Dra.</a>
+                    <div class="nav-item-with-submenu">
+                        <a href="#" class="nav-item-toggle">Especialidades</a>
+                        <div class="submenu">
+                            <a href="ginecologia.html">Ginecologia</a>
+                            <a href="obstetricia.html">Obstetrícia</a>
+                            <a href="medicina-fetal.html">Medicina Fetal</a>
+                        </div>
+                    </div>
+                    <a href="exames.html">Exames</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contato.html" class="mobile-nav-cta">Agendar Consulta</a>
+                </nav>
+
+                <a href="#contato" class="header-cta">📅 Agendar Consulta</a>
+
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.main-nav');
+
+        if (toggle) {
+            toggle.addEventListener('click', () => {
+                toggle.classList.toggle('is-open');
+                nav.classList.toggle('is-open');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('header')) {
+                    toggle.classList.remove('is-open');
+                    nav.classList.remove('is-open');
+                }
+            });
+        }
+
+        // Menu mobile toggle with IDs
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('is-open');
+                mainNav.classList.toggle('is-open');
+            });
+            mainNav.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => {
+                    menuToggle.classList.remove('is-open');
+                    mainNav.classList.remove('is-open');
+                });
+            });
+        }
+    </script>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <a href="index.html">Início</a> / <span>Clínica</span>
+    </div>
+
+    <!-- ============================
+         HERO – CLÍNICA
+    ============================= -->
+    <section class="clinica-hero">
+      <!-- Imagem de fundo -->
+      <div class="clinica-hero__bg"></div>
+      <!-- Overlay degradê da esquerda -->
+      <div class="clinica-hero__overlay"></div>
+      <!-- Conteúdo -->
+      <div class="clinica-hero__content">
+        <h1 class="clinica-hero__title">
+          Excelência, acolhimento<br />
+          e tecnologia para cuidar<br />
+          de você e do seu bebê
+        </h1>
+        <p class="clinica-hero__subtitle">
+          Um ambiente cuidadosamente planejado para<br />
+          proporcionar conforto, segurança e diagnósticos<br />
+          precisos em todas as fases da gestação.
+        </p>
+        <div class="clinica-hero__buttons">
+          <a href="/contato" class="clinica-hero__btn clinica-hero__btn--primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            Agendar Consulta
+          </a>
+          <a href="https://wa.me/5521970737523" target="_blank" class="clinica-hero__btn clinica-hero__btn--whatsapp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.525 5.845L.057 23.885a.5.5 0 0 0 .606.61l6.197-1.396A11.93 11.93 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.027-1.381l-.36-.214-3.73.84.894-3.617-.235-.372A9.778 9.778 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+            </svg>
+            Falar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SEÇÃO 2: SOBRE A CLÍNICA
+    ============================= -->
+    <section class="sobre-clinica">
+      <!-- COLUNA ESQUERDA: FOTO sangrada até a borda -->
+      <div class="sobre-clinica__foto">
+        <img
+          src="https://www.crmedicinafetal.com/wp-content/uploads/2026/06/ChatGPT-Image-23-de-jun.-de-2026-22_51_33.png"
+          alt="Sala de ultrassonografia – CR Medicina Fetal"
+        />
+      </div>
+      <!-- COLUNA DIREITA: TEXTO -->
+      <div class="sobre-clinica__texto">
+        <span class="sobre-clinica__label">SOBRE A CLÍNICA</span>
+        <h2 class="sobre-clinica__titulo">
+          Um espaço pensado para<br />
+          receber cada família com<br />
+          tranquilidade
+        </h2>
+        <p class="sobre-clinica__paragrafo">
+          A CR Medicina Fetal foi criada para oferecer um atendimento
+          especializado em Medicina Fetal, Obstetrícia e Ginecologia,
+          reunindo experiência médica, tecnologia avançada e um
+          atendimento próximo e <strong class="sobre-clinica__destaque">humanizado</strong>.
+        </p>
+        <p class="sobre-clinica__paragrafo">
+          Cada detalhe da clínica foi planejado para proporcionar uma
+          experiência acolhedora, garantindo que as pacientes vivam cada
+          momento nesse espaço com conforto e confiança.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================
+         SEÇÃO 3: AMBIENTE / GALERIA
+    ============================= -->
+    <section class="ambiente-section">
+      <!-- COLUNA ESQUERDA: TEXTO + ORNAMENTO -->
+      <div class="ambiente-texto">
+        <span class="ambiente-label">AMBIENTE</span>
+        <h2 class="ambiente-titulo">
+          Conforto e acolhimento<br />
+          em cada detalhe
+        </h2>
+        <p class="ambiente-descricao">
+          Ambientes modernos, confortáveis e preparados para
+          oferecer uma experiência tranquila da chegada
+          até a realização dos exames.
+        </p>
+        <!-- Ornamento decorativo SVG (flor/arabesco outline) -->
+        <div class="ambiente-ornamento" aria-hidden="true">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#c87941" stroke-width="1" opacity="0.35">
+            <!-- Pétalas externas -->
+            <ellipse cx="100" cy="60"  rx="18" ry="40" transform="rotate(0   100 100)"/>
+            <ellipse cx="100" cy="60"  rx="18" ry="40" transform="rotate(45  100 100)"/>
+            <ellipse cx="100" cy="60"  rx="18" ry="40" transform="rotate(90  100 100)"/>
+            <ellipse cx="100" cy="60"  rx="18" ry="40" transform="rotate(135 100 100)"/>
+            <ellipse cx="100" cy="60"  rx="18" ry="40" transform="rotate(180 100 100)"/>
+            <ellipse cx="100" cy="60"  rx="18" ry="40" transform="rotate(225 100 100)"/>
+            <ellipse cx="100" cy="60"  rx="18" ry="40" transform="rotate(270 100 100)"/>
+            <ellipse cx="100" cy="60"  rx="18" ry="40" transform="rotate(315 100 100)"/>
+            <!-- Pétalas internas menores -->
+            <ellipse cx="100" cy="72"  rx="10" ry="26" transform="rotate(22.5  100 100)"/>
+            <ellipse cx="100" cy="72"  rx="10" ry="26" transform="rotate(67.5  100 100)"/>
+            <ellipse cx="100" cy="72"  rx="10" ry="26" transform="rotate(112.5 100 100)"/>
+            <ellipse cx="100" cy="72"  rx="10" ry="26" transform="rotate(157.5 100 100)"/>
+            <ellipse cx="100" cy="72"  rx="10" ry="26" transform="rotate(202.5 100 100)"/>
+            <ellipse cx="100" cy="72"  rx="10" ry="26" transform="rotate(247.5 100 100)"/>
+            <ellipse cx="100" cy="72"  rx="10" ry="26" transform="rotate(292.5 100 100)"/>
+            <ellipse cx="100" cy="72"  rx="10" ry="26" transform="rotate(337.5 100 100)"/>
+            <!-- Círculo central -->
+            <circle cx="100" cy="100" r="14"/>
+            <circle cx="100" cy="100" r="7"/>
+          </svg>
+        </div>
+      </div>
+      <!-- COLUNA DIREITA: GRADE DE FOTOS 2x2 -->
+      <div class="ambiente-galeria">
+        <div class="galeria-grid">
+          <div class="galeria-item galeria-item--grande" onclick="abrirLightbox(0)">
+            <img
+              src="https://www.crmedicinafetal.com/wp-content/uploads/2021/06/consultorio-crmedicina-fetal-06-1.jpg"
+              alt="Consultório CR Medicina Fetal – Recepção"
+              loading="lazy"
+            />
+            <div class="galeria-item__overlay">
+              <span class="galeria-item__icone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="galeria-item" onclick="abrirLightbox(1)">
+            <img
+              src="https://www.crmedicinafetal.com/wp-content/uploads/2021/06/consultorio-crmedicina-fetal-04-1.jpg"
+              alt="Consultório CR Medicina Fetal – Sala de espera"
+              loading="lazy"
+            />
+            <div class="galeria-item__overlay">
+              <span class="galeria-item__icone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="galeria-item" onclick="abrirLightbox(2)">
+            <img
+              src="https://www.crmedicinafetal.com/wp-content/uploads/2021/06/consultorio-crmedicina-fetal-03-1.jpg"
+              alt="Consultório CR Medicina Fetal – Consultório"
+              loading="lazy"
+            />
+            <div class="galeria-item__overlay">
+              <span class="galeria-item__icone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="galeria-item" onclick="abrirLightbox(3)">
+            <img
+              src="https://www.crmedicinafetal.com/wp-content/uploads/2021/06/consultorio-crmedicina-fetal-08.jpg"
+              alt="Consultório CR Medicina Fetal – Detalhe"
+              loading="lazy"
+            />
+            <div class="galeria-item__overlay">
+              <span class="galeria-item__icone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div><!-- /galeria-grid -->
+      </div><!-- /ambiente-galeria -->
+    </section>
+    <!-- ============================
+         LIGHTBOX
+    ============================= -->
+    <div class="lightbox" id="lightbox" onclick="fecharLightbox(event)">
+      <button class="lightbox__fechar" onclick="fecharLightbox()" aria-label="Fechar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="28" height="28">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <button class="lightbox__nav lightbox__nav--prev" onclick="navegarLightbox(-1)" aria-label="Anterior">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+      <div class="lightbox__conteudo">
+        <img id="lightbox-img" src="" alt="" />
+      </div>
+      <button class="lightbox__nav lightbox__nav--next" onclick="navegarLightbox(1)" aria-label="Próxima">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+      <span class="lightbox__contador" id="lightbox-contador"></span>
+    </div>
+
+    <!-- ============================
+         SEÇÃO 4: TECNOLOGIA
+    ============================= -->
+    <section class="tecnologia-section">
+      <!-- COLUNA ESQUERDA: FOTO sangrada -->
+      <div class="tecnologia-foto">
+        <img
+          src="https://www.crmedicinafetal.com/wp-content/uploads/2026/06/Zoom-da-Maquina.jpg"
+          alt="Equipamento de ultrassonografia – CR Medicina Fetal"
+          loading="lazy"
+        />
+      </div>
+      <!-- COLUNA DIREITA: TEXTO -->
+      <div class="tecnologia-texto">
+        <span class="tecnologia-label">TECNOLOGIA</span>
+        <h2 class="tecnologia-titulo">
+          Tecnologia de ponta para<br />
+          diagnósticos mais precisos
+        </h2>
+        <p class="tecnologia-paragrafo">
+          A CR Medicina Fetal conta com equipamentos modernos de
+          ultrassonografia que permitem avaliações detalhadas da saúde
+          materna e do desenvolvimento fetal.
+        </p>
+        <p class="tecnologia-paragrafo">
+          Os recursos avançados de imagem proporcionam maior precisão
+          diagnóstica e permitem acompanhar cada fase da gestação com
+          segurança e tranquilidade.
+        </p>
+        <!-- ÍCONES DE DIFERENCIAIS -->
+        <div class="tecnologia-diferenciais">
+          <div class="diferencial-item">
+            <div class="diferencial-icone">
+              <!-- Ícone: monitor/tela HD -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#c87941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <p class="diferencial-texto">Imagem de alta<br />definição</p>
+          </div>
+          <div class="diferencial-item">
+            <div class="diferencial-icone">
+              <!-- Ícone: ultrassom 3D/4D -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#c87941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+            </div>
+            <p class="diferencial-texto">Ultrassom<br />3D e 4D</p>
+          </div>
+          <div class="diferencial-item">
+            <div class="diferencial-icone">
+              <!-- Ícone: checklist/avaliações -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#c87941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 11l3 3L22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
+            <p class="diferencial-texto">Avaliações precisas<br />em todas as fases</p>
+          </div>
+          <div class="diferencial-item">
+            <div class="diferencial-icone">
+              <!-- Ícone: coração/acompanhamento -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#c87941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <p class="diferencial-texto">Maior segurança no<br />acompanhamento gestacional</p>
+          </div>
+        </div><!-- /tecnologia-diferenciais -->
+      </div><!-- /tecnologia-texto -->
+    </section>
+
+    <!-- ============================
+         SEÇÃO 5: EXPERIÊNCIA HUMANIZADA
+    ============================= -->
+    <section class="humanizada-section">
+      <!-- COLUNA ESQUERDA: TEXTO -->
+      <div class="humanizada-texto">
+        <span class="humanizada-label">EXPERIÊNCIA HUMANIZADA</span>
+        <h2 class="humanizada-titulo">
+          Mais do que exames,<br />
+          um cuidado individualizado
+        </h2>
+        <p class="humanizada-paragrafo">
+          Sabemos que cada gestação é única.<br />
+          Por isso, oferecemos atendimento cuidadoso, escuta
+          atenta e acompanhamento próximo, proporcionando
+          segurança e tranquilidade para a gestante e sua família.
+        </p>
+      </div>
+      <!-- COLUNA DIREITA: FOTO sangrada até a borda -->
+      <div class="humanizada-foto">
+        <img
+          src="https://www.crmedicinafetal.com/wp-content/uploads/2026/06/Dra-Carol-Sorrindo-Exame-Menor.png"
+          alt="Atendimento humanizado – CR Medicina Fetal"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+<!-- FOOTER -->
+    <footer>
+        <div class="site-footer">
+            <div class="footer-container">
+                <!-- LOGO + SLOGAN -->
+                <div class="footer-brand">
+                    <div class="logo-wrapper">
+                        <img src="https://www.crmedicinafetal.com/wp-content/uploads/2019/01/cr-medicina-fetal-logo-peq.png" alt="CR Medicina Fetal Logo">
+                        <div class="logo-text">
+                            Medicina Fetal<br>
+                            Ginecologia<br>
+                            Obstetrícia
+                        </div>
+                    </div>
+                    <p class="tagline">Excelência no diagnóstico, tecnologia e cuidado para sua gestação.</p>
+                </div>
+
+                <!-- DIVISOR VERTICAL -->
+                <div class="footer-divider"></div>
+
+                <!-- NAVEGAÇÃO -->
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="clinica.html">Clínica</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+
+                <!-- ESPECIALIDADES -->
+                <div class="footer-col">
+                    <h4>Especialidades</h4>
+                    <ul>
+                        <li><a href="ginecologia.html">Ginecologia</a></li>
+                        <li><a href="obstetricia.html">Obstetrícia</a></li>
+                        <li><a href="medicina-fetal.html">Medicina Fetal</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTATO -->
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <div class="contact-item">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8825a" width="20" height="20">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>Via Parque Comfort Working</strong><br>
+                            Av. Ayrton Senna, 3000<br>
+                            Bloco Grumari, Sala 3032<br>
+                            CEP: 22775904<br>
+                            Rio de Janeiro - Brasil
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8825a" width="20" height="20">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>E-mail:</strong> contato@crmedicinafetal.com.br
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8825a" width="20" height="20">
+                                <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>Tel:</strong> +55 21 3268-5194<br>
+                            +55 21 97073-7523
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REDES SOCIAIS -->
+                <div class="footer-social">
+                    <h4>Onde nos encontrar</h4>
+                    <div class="social-icons">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/dra.carolinaribeiro/" target="_blank" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.516 2.497 5.783 2.226 7.149 2.163 8.416 2.105 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038C23.986 15.668 24 15.259 24 12s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/Dracarolinaribeiro-131122297582802/" target="_blank" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM BAR -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <span>© 2024 CR Medicina Fetal. Todos os direitos reservados.</span>
+                <span class="credit">Desenvolvido por <a href="#">CR Medicina Fetal</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      // ==============================
+      //  LIGHTBOX – lógica pura JS
+      // ==============================
+      const fotos = [
+        {
+          src: 'https://www.crmedicinafetal.com/wp-content/uploads/2021/06/consultorio-crmedicina-fetal-06-1.jpg',
+          alt: 'Consultório CR Medicina Fetal – Recepção'
+        },
+        {
+          src: 'https://www.crmedicinafetal.com/wp-content/uploads/2021/06/consultorio-crmedicina-fetal-04-1.jpg',
+          alt: 'Consultório CR Medicina Fetal – Sala de espera'
+        },
+        {
+          src: 'https://www.crmedicinafetal.com/wp-content/uploads/2021/06/consultorio-crmedicina-fetal-03-1.jpg',
+          alt: 'Consultório CR Medicina Fetal – Consultório'
+        },
+        {
+          src: 'https://www.crmedicinafetal.com/wp-content/uploads/2021/06/consultorio-crmedicina-fetal-08.jpg',
+          alt: 'Consultório CR Medicina Fetal – Detalhe'
+        }
+      ];
+
+      let indiceAtual = 0;
+
+      function abrirLightbox(indice) {
+        indiceAtual = indice;
+        atualizarLightbox();
+        document.getElementById('lightbox').classList.add('ativo');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function fecharLightbox(event) {
+        // Fecha só se clicar no fundo escuro (não na imagem)
+        if (event && event.target !== document.getElementById('lightbox')) return;
+        document.getElementById('lightbox').classList.remove('ativo');
+        document.body.style.overflow = '';
+      }
+
+      function navegarLightbox(direcao) {
+        indiceAtual = (indiceAtual + direcao + fotos.length) % fotos.length;
+        atualizarLightbox();
+      }
+
+      function atualizarLightbox() {
+        const foto = fotos[indiceAtual];
+        const img = document.getElementById('lightbox-img');
+        img.src = foto.src;
+        img.alt = foto.alt;
+        document.getElementById('lightbox-contador').textContent =
+          (indiceAtual + 1) + ' / ' + fotos.length;
+      }
+
+      // Teclado: ESC para fechar, setas para navegar
+      document.addEventListener('keydown', function(e) {
+        const lb = document.getElementById('lightbox');
+        if (!lb.classList.contains('ativo')) return;
+        if (e.key === 'Escape')      { lb.classList.remove('ativo'); document.body.style.overflow = ''; }
+        if (e.key === 'ArrowLeft')   navegarLightbox(-1);
+        if (e.key === 'ArrowRight')  navegarLightbox(1);
+      });
+    </script>
+
+    <script>
+        function changeLanguage(lang) {
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if (lang === 'en') {
+                window.location.href = 'clinica-en.html';
+            }
+        }
+    </script>
+</body>
+</html>

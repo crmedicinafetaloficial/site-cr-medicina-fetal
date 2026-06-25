@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ginecologia - CR Medicina Fetal</title>
+    <meta name="description" content="Serviços de Ginecologia - CR Medicina Fetal">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Poppins:wght@300;400;800&family=Montserrat:wght@400;600&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Hind:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #E8825D;
+            --secondary-color: #2C3E50;
+            --light-gray: #F8F9FA;
+            --dark-gray: #333;
+            --border-color: #E0E0E0;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ══════════════════════════════════
+           HEADER / MENU — Estilo Premium
+           ══════════════════════════════════ */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(13, 27, 42, 0.08);
+        }
+
+        .container {
+            width: min(1180px, 100% - 40px);
+            margin-inline: auto;
+            padding: 0;
+        }
+
+        .header-inner {
+            height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        /* ── Logo ── */
+        .logo-link {
+            text-decoration: none;
+            flex-shrink: 0;
+            line-height: 0;
+        }
+
+        .logo-img {
+            height: 52px;
+            width: auto;
+            display: block;
+        }
+
+        /* ── Nav links (desktop) ── */
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+        }
+
+        .main-nav a {
+            position: relative;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #0D1B2A;
+            letter-spacing: -0.1px;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+
+        /* Sublinhado animado no hover */
+        .main-nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: #D4805C;
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+
+        .main-nav a:hover { color: #D4805C; }
+        .main-nav a:hover::after { width: 100%; }
+
+        /* Submenu Especialidades */
+        .nav-item-with-submenu {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-item-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #0D1B2A;
+            letter-spacing: -0.1px;
+            transition: color 0.3s;
+            white-space: nowrap;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .nav-item-toggle::after {
+            content: "▼";
+            font-size: 9px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item-toggle:hover {
+            color: #D4805C;
+        }
+
+        .nav-item-toggle:hover::after {
+            transform: rotateZ(180deg);
+        }
+
+        .nav-item-toggle::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: #D4805C;
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+
+        .nav-item-with-submenu:hover .nav-item-toggle::before {
+            width: 100%;
+        }
+
+        .submenu {
+            position: absolute;
+            top: calc(100% + 12px);
+            left: 0;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            min-width: 180px;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            z-index: 200;
+        }
+
+        .nav-item-with-submenu:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .submenu a {
+            display: block;
+            padding: 11px 16px;
+            color: #0D1B2A;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: background-color 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+
+        .submenu a:first-child {
+            border-radius: 7px 7px 0 0;
+        }
+
+        .submenu a:last-child {
+            border-radius: 0 0 7px 7px;
+        }
+
+        .submenu a:hover {
+            background-color: #f5f0e8;
+            color: #D4805C;
+        }
+
+        /* Link CTA mobile — oculto no desktop */
+        .mobile-nav-cta { display: none; }
+
+        /* ── Botão CTA desktop ── */
+        .header-cta {
+            text-decoration: none;
+            padding: 10px 20px;
+            background: #D4805C;
+            color: white;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .header-cta:hover {
+            background: #c87941;
+        }
+
+        /* ── Botão menu mobile ── */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            gap: 6px;
+            z-index: 160;
+        }
+
+        .mobile-menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: #0D1B2A;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        .mobile-menu-toggle.is-open span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .mobile-menu-toggle.is-open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.is-open span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* ════════════════════════════════
+           MAIN CONTENT
+        ════════════════════════════════ */
+        main {
+            min-height: calc(100vh - 82px - 300px);
+            padding: 60px 40px;
+        }
+
+        .content-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* ════════════════════════════════
+           FOOTER
+        ════════════════════════════════ */
+        footer {
+            background-color: var(--white);
+            color: var(--dark-gray);
+            padding: 60px 40px 0;
+        }
+
+        .site-footer {
+            background-color: #0d1b2e;
+            color: #ffffff;
+            padding: 60px 40px 40px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Divisor vertical */
+        .footer-divider {
+            background-color: rgba(255, 255, 255, 0.15);
+            width: 1px;
+            align-self: stretch;
+            min-height: 200px;
+        }
+
+        /* ========================
+           COLUNA: LOGO + SLOGAN
+        ======================== */
+        .footer-brand .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .footer-brand .logo-wrapper img {
+            height: 80px;
+            width: auto;
+        }
+
+        .footer-brand .logo-text {
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            padding-left: 14px;
+            line-height: 1.7;
+            font-size: 13px;
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        .footer-brand .tagline {
+            font-size: 13px;
+            color: #c0cce0;
+            line-height: 1.6;
+            max-width: 220px;
+        }
+
+        /* ========================
+           COLUNAS DE LINKS
+        ======================== */
+        .footer-col h4 {
+            color: #e8825a;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #e8825a;
+        }
+
+        /* ========================
+           COLUNA: CONTATO
+        ======================== */
+        .footer-contact h4 {
+            color: #e8825a;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .footer-contact .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .footer-contact .contact-item .icon {
+            color: #e8825a;
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .footer-contact .contact-item strong {
+            font-weight: 600;
+        }
+
+        /* ========================
+           COLUNA: REDES SOCIAIS
+        ======================== */
+        .footer-social h4 {
+            color: #e8825a;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid #e8825a;
+            color: #e8825a;
+            text-decoration: none;
+            font-size: 20px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .social-icons a:hover {
+            background-color: #e8825a;
+            color: #ffffff;
+        }
+
+        .social-icons svg {
+            width: 20px;
+            height: 20px;
+            fill: #e8825a;
+            transition: fill 0.2s;
+        }
+
+        .social-icons a:hover svg {
+            fill: #ffffff;
+        }
+
+        /* ========================
+           FOOTER BOTTOM BAR
+        ======================== */
+        .footer-bottom {
+            background-color: #091523;
+            padding: 18px 40px;
+        }
+
+        .footer-bottom-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #8899aa;
+        }
+
+        .footer-bottom-inner .credit a {
+            color: #e8825a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-bottom-inner .credit a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========================
+           RESPONSIVO – MOBILE
+        ======================== */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: 60px;
+            }
+
+            .logo-img { height: 44px; }
+            .mobile-menu-toggle { display: flex; }
+            .header-cta { display: none; }
+
+            .main-nav {
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: white;
+                border: 1px solid #e0e0e0;
+                border-radius: 12px;
+                padding: 8px;
+                gap: 0;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-20px);
+                pointer-events: none;
+                transition: 0.25s;
+                z-index: 150;
+            }
+
+            .main-nav.is-open {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+
+            .main-nav a {
+                padding: 14px 16px;
+                border-radius: 12px;
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .main-nav a:hover {
+                background: #fdf6f2;
+                color: #D4805C;
+            }
+
+            .main-nav a::after { display: none; }
+
+            .mobile-nav-cta {
+                display: flex !important;
+                margin-top: 8px;
+            }
+
+            .site-footer {
+                padding: 40px 24px 30px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-divider {
+                display: none;
+            }
+
+            .footer-brand .logo-wrapper {
+                margin-bottom: 16px;
+            }
+
+            .footer-brand .tagline {
+                max-width: 100%;
+            }
+
+            .footer-bottom {
+                padding: 16px 24px;
+            }
+
+            .footer-bottom-inner {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            main {
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER PREMIUM -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo-link">
+                    <img src="https://www.crmedicinafetal.com/wp-content/uploads/2024/10/cr-medicina-fetal-logo-peq.webp" alt="CR Medicina Fetal" class="logo-img">
+                </a>
+
+                <nav class="main-nav" id="mainNav">
+                    <a href="index.html">Home</a>
+                    <a href="clinica.html">Clínica</a>
+                    <a href="perfil.html">Sobre a Dra.</a>
+                    <div class="nav-item-with-submenu">
+                        <a href="#" class="nav-item-toggle">Especialidades</a>
+                        <div class="submenu">
+                            <a href="ginecologia.html">Ginecologia</a>
+                            <a href="obstetricia.html">Obstetrícia</a>
+                            <a href="medicina-fetal.html">Medicina Fetal</a>
+                        </div>
+                    </div>
+                    <a href="exames.html">Exames</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contato.html" class="mobile-nav-cta">Agendar Consulta</a>
+                </nav>
+
+                <a href="contato.html" class="header-cta">📅 Agendar Consulta</a>
+
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <div class="content-container">
+            <h1>Ginecologia</h1>
+            <p>Conteúdo da página será adicionado em breve...</p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="site-footer">
+            <div class="footer-container">
+                <!-- LOGO + SLOGAN -->
+                <div class="footer-brand">
+                    <div class="logo-wrapper">
+                        <img src="https://www.crmedicinafetal.com/wp-content/uploads/2019/01/cr-medicina-fetal-logo-peq.png" alt="CR Medicina Fetal Logo">
+                        <div class="logo-text">
+                            Medicina Fetal<br>
+                            Ginecologia<br>
+                            Obstetrícia
+                        </div>
+                    </div>
+                    <p class="tagline">Excelência no diagnóstico, tecnologia e cuidado para sua gestação.</p>
+                </div>
+
+                <!-- DIVISOR VERTICAL -->
+                <div class="footer-divider"></div>
+
+                <!-- NAVEGAÇÃO -->
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="clinica.html">Clínica</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+
+                <!-- ESPECIALIDADES -->
+                <div class="footer-col">
+                    <h4>Especialidades</h4>
+                    <ul>
+                        <li><a href="ginecologia.html">Ginecologia</a></li>
+                        <li><a href="obstetricia.html">Obstetrícia</a></li>
+                        <li><a href="medicina-fetal.html">Medicina Fetal</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTATO -->
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <div class="contact-item">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8825a" width="20" height="20">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>Via Parque Comfort Working</strong><br>
+                            Av. Ayrton Senna, 3000<br>
+                            Bloco Grumari, Sala 3032<br>
+                            CEP: 22775904<br>
+                            Rio de Janeiro - Brasil
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8825a" width="20" height="20">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>E-mail:</strong> contato@crmedicinafetal.com.br
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8825a" width="20" height="20">
+                                <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>Tel:</strong> +55 21 3268-5194<br>
+                            +55 21 97073-7523
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REDES SOCIAIS -->
+                <div class="footer-social">
+                    <h4>Onde nos encontrar</h4>
+                    <div class="social-icons">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/dra.carolinaribeiro/" target="_blank" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.516 2.497 5.783 2.226 7.149 2.163 8.416 2.105 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038C23.986 15.668 24 15.259 24 12s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/Dracarolinaribeiro-131122297582802/" target="_blank" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM BAR -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <span>© 2024 CR Medicina Fetal. Todos os direitos reservados.</span>
+                <span class="credit">Desenvolvido por <a href="#">CR Medicina Fetal</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.main-nav');
+
+        if (toggle) {
+            toggle.addEventListener('click', () => {
+                toggle.classList.toggle('is-open');
+                nav.classList.toggle('is-open');
+            });
+
+            // Fechar menu ao clicar em um link
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (link.href !== '#') {
+                        toggle.classList.remove('is-open');
+                        nav.classList.remove('is-open');
+                    }
+                });
+            });
+
+            // Fechar menu ao clicar fora
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('header')) {
+                    toggle.classList.remove('is-open');
+                    nav.classList.remove('is-open');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
