@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero – Carol Ribeiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Poppins:wght@300;400;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primaria:  #8B5CF6;
+      --primaria2: #7C3AED;
+      --escuro:    #1a0533;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.65;
+      background: #0f0f0f;
+    }
+
+    .container {
+      width: min(1180px, 100% - 40px);
+      margin-inline: auto;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 760px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 92px 0;
+      background-image:
+        linear-gradient(90deg,
+          rgba(26, 5, 51, 0.92)  0%,
+          rgba(26, 5, 51, 0.75) 30%,
+          rgba(26, 5, 51, 0.38) 58%,
+          rgba(26, 5, 51, 0.05) 100%
+        ),
+        url("https://www.crmedicinafetal.com/wp-content/uploads/2026/06/Home-Principal.png");
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(620px, 100%);
+      padding-top: 20px;
+    }
+
+    /* Badge */
+    .hero .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
+      color: white;
+      border-radius: 999px;
+      padding: 8px 15px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+    }
+
+    .hero .badge .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--primaria);
+      box-shadow: 0 0 0 6px rgba(139, 92, 246, 0.22);
+      flex-shrink: 0;
+    }
+
+    /* H1 */
+    .hero h1 {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: clamp(36px, 4vw, 58px);
+      font-weight: 800;
+      color: white;
+      max-width: 610px;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    /* Paragrafo */
+    .hero p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 16px;
+      line-height: 1.65;
+      max-width: 580px;
+      margin-bottom: 30px;
+    }
+
+    /* Botoes */
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 999px;
+      padding: 15px 28px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: var(--primaria);
+      color: white;
+      box-shadow: 0 12px 30px rgba(139, 92, 246, 0.35);
+    }
+    .btn-primary:hover {
+      background: var(--primaria2);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: rgba(255, 255, 255, 0.55);
+      color: white;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+    }
+    .btn-outline:hover {
+      background: white;
+      color: var(--escuro);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 60px 0 80px;
+        min-height: 600px;
+        background-image:
+          linear-gradient(180deg,
+            rgba(26, 5, 51, 0.88)  0%,
+            rgba(26, 5, 51, 0.80) 60%,
+            rgba(26, 5, 51, 0.55) 100%
+          ),
+          url("https://www.crmedicinafetal.com/wp-content/uploads/2026/06/Home-Principal.png");
+        background-position: 65% center;
+      }
+      .hero h1 { font-size: clamp(30px, 8vw, 40px); }
+      .hero p  { font-size: 15px; }
+      .btn     { padding: 13px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="badge">
+          <span class="dot"></span>
+          Medicina Fetal
+        </div>
+
+        <h1>Cuidado especializado desde o inicio da vida</h1>
+
+        <p>
+          Acompanhamento completo e humanizado em medicina fetal,
+          com diagnostico preciso e suporte para cada etapa da sua gestacao.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary">Agendar consulta</a>
+          <a href="#" class="btn btn-outline">Conhecer servicos</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
