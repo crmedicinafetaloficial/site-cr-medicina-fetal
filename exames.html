@@ -91,7 +91,6 @@
             white-space: nowrap;
         }
 
-        /* Sublinhado animado no hover */
         .main-nav a::after {
             content: "";
             position: absolute;
@@ -138,13 +137,8 @@
             transition: transform 0.3s ease;
         }
 
-        .nav-item-toggle:hover {
-            color: #D4805C;
-        }
-
-        .nav-item-toggle:hover::after {
-            transform: rotateZ(180deg);
-        }
+        .nav-item-toggle:hover { color: #D4805C; }
+        .nav-item-toggle:hover::after { transform: rotateZ(180deg); }
 
         .nav-item-toggle::before {
             content: "";
@@ -158,19 +152,17 @@
             transition: width 0.3s;
         }
 
-        .nav-item-with-submenu:hover .nav-item-toggle::before {
-            width: 100%;
-        }
+        .nav-item-with-submenu:hover .nav-item-toggle::before { width: 100%; }
 
         .submenu {
             position: absolute;
-            top: calc(100% + 12px);
+            top: 100%;
             left: 0;
             background: #ffffff;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             min-width: 180px;
-            padding: 8px 0;
+            padding: 12px 0 8px;
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
@@ -198,67 +190,80 @@
             white-space: nowrap;
         }
 
-        .submenu a:first-child {
-            border-radius: 7px 7px 0 0;
-        }
-
-        .submenu a:last-child {
-            border-radius: 0 0 7px 7px;
-        }
-
-        .submenu a:hover {
-            background-color: #f5f0e8;
-            color: #D4805C;
-        }
+        .submenu a:first-child { border-radius: 7px 7px 0 0; }
+        .submenu a:last-child { border-radius: 0 0 7px 7px; }
+        .submenu a:hover { background-color: #f5f0e8; color: #D4805C; }
 
         /* Link CTA mobile — oculto no desktop */
         .mobile-nav-cta { display: none; }
 
         /* ── Botão CTA desktop ── */
         .header-cta {
-            text-decoration: none;
-            padding: 10px 20px;
-            background: #D4805C;
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 26px;
+            background: #0D1B2A;
             color: white;
-            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
             font-size: 13px;
-            font-weight: 600;
-            transition: background 0.3s;
+            font-weight: 700;
+            border-radius: 999px;
+            text-decoration: none;
+            letter-spacing: 0.01em;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(13, 27, 42, 0.18);
+            white-space: nowrap;
         }
 
         .header-cta:hover {
-            background: #c87941;
+            background: #D4805C;
+            box-shadow: 0 10px 28px rgba(212, 128, 92, 0.35);
+            transform: translateY(-1px);
         }
 
-        /* ── Botão menu mobile ── */
+        /* ── Hambúrguer ── */
         .mobile-menu-toggle {
             display: none;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(13, 27, 42, 0.12);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.7);
+            align-items: center;
+            justify-content: center;
             flex-direction: column;
-            background: none;
-            border: none;
+            gap: 5px;
             cursor: pointer;
-            gap: 6px;
-            z-index: 160;
+            transition: 0.3s;
+            appearance: none;
+            -webkit-appearance: none;
+            position: relative;
+            z-index: 200;
         }
 
         .mobile-menu-toggle span {
-            width: 24px;
+            display: block;
+            width: 21px;
             height: 2px;
+            border-radius: 99px;
             background: #0D1B2A;
-            border-radius: 2px;
             transition: 0.3s;
         }
 
+        .mobile-menu-toggle:hover {
+            background: white;
+            box-shadow: 0 8px 24px rgba(13, 27, 42, 0.1);
+        }
+
         .mobile-menu-toggle.is-open span:nth-child(1) {
-            transform: rotate(45deg) translate(10px, 10px);
+            transform: translateY(7px) rotate(45deg);
         }
-
-        .mobile-menu-toggle.is-open span:nth-child(2) {
-            opacity: 0;
-        }
-
+        .mobile-menu-toggle.is-open span:nth-child(2) { opacity: 0; }
         .mobile-menu-toggle.is-open span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
+            transform: translateY(-7px) rotate(-45deg);
         }
 
         /* ══════════════════════════════════

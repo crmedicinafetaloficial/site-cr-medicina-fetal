@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -265,6 +265,29 @@
         .content-container {
             max-width: 1000px;
             margin: 0 auto;
+        }
+        .btn-voltar {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #fff;
+            background: #BE8365;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+            transition: background 0.2s;
+        }
+
+        .btn-voltar:hover {
+            background: #A5634D;
+        }
+
+        .btn-voltar svg {
+            flex-shrink: 0;
         }
 
         .exame-hero {
@@ -762,6 +785,12 @@
     <main>
         <div class="content-container">
             <div class="exame-hero">
+                <a href="exames.html" class="btn-voltar">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                    Voltar para Exames
+                </a>
                 <h1>Medida de Comprimento do Colo</h1>
                 <p class="exame-description">
                     Ultrassonografia transvaginal que visa calcular o risco de parto prematuro, especialmente em mulheres que se encontram no grupo de alto risco: parto prematuro anterior, gestação múltipla, anormalidades uterinas e cirurgia cervical prévia.

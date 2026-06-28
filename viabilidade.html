@@ -267,6 +267,30 @@
             margin: 0 auto;
         }
 
+        .btn-voltar {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #fff;
+            background: #BE8365;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+            transition: background 0.2s;
+        }
+
+        .btn-voltar:hover {
+            background: #A5634D;
+        }
+
+        .btn-voltar svg {
+            flex-shrink: 0;
+        }
+
         .exame-hero {
             margin-bottom: 50px;
         }
@@ -762,6 +786,12 @@
     <main>
         <div class="content-container">
             <div class="exame-hero">
+                <a href="exames.html" class="btn-voltar">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                    Voltar para Exames
+                </a>
                 <h1>Viabilidade</h1>
                 <p class="exame-period">(6 a 10 semanas de gestação)</p>
                 <p class="exame-description">

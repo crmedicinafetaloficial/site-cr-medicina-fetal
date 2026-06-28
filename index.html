@@ -732,6 +732,9 @@
             display: grid;
             grid-template-columns: 45% 55%;   /* foto 45%, conteúdo 55% */
             min-height: 460px;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
         }
 
         /* ── Coluna esquerda: foto ocupa 100% da coluna ── */
@@ -1055,9 +1058,11 @@
         /* ── Coluna direita: card equipamento ── */
         .tec-right {
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 40px 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            height: 420px;
+            padding: 0;
         }
 
         .tech-card-new {
@@ -1147,6 +1152,43 @@
             background: #0D1B2A;
             color: white;
         }
+
+        /* ── Modal tela cheia ── */
+        #machine-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,0.92);
+            align-items: center;
+            justify-content: center;
+        }
+        #machine-modal.active { display: flex; }
+        #machine-modal img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+        .modal-close {
+            position: absolute;
+            top: 24px;
+            right: 28px;
+            background: rgba(255,255,255,0.12);
+            border: 1.5px solid rgba(255,255,255,0.35);
+            color: #fff;
+            font-size: 18px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            line-height: 1;
+        }
+        .modal-close:hover { background: rgba(255,255,255,0.25); }
 
         .btn-fullscreen-new svg {
             width: 14px;
@@ -2093,8 +2135,7 @@
 
             <p>Referência mundial em imagem obstétrica e medicina fetal.</p>
 
-            <a href="https://www.crmedicinafetal.com/wp-content/uploads/2026/06/Maquina-cortada.png"
-               target="_blank" class="btn-fullscreen-new">
+            <a href="#" onclick="openMachineModal(event)" class="btn-fullscreen-new">
               Ver em Tela Cheia
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
@@ -2244,6 +2285,30 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal tela cheia — máquina -->
+    <div id="machine-modal">
+        <button class="modal-close" onclick="closeMachineModal()" aria-label="Fechar">&#x2715;</button>
+        <img src="https://www.crmedicinafetal.com/wp-content/uploads/2026/06/Maquina-cortada.png" alt="Samsung HERA W10 Elite">
+    </div>
+
+    <script>
+        function openMachineModal(e) {
+            e.preventDefault();
+            document.getElementById('machine-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMachineModal() {
+            document.getElementById('machine-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('machine-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeMachineModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeMachineModal();
+        });
+    </script>
 
     <script>
         function changeLanguage(lang) {
