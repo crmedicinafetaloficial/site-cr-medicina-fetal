@@ -292,6 +292,35 @@
             max-width: 600px;
         }
 
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255,255,255,.32);
+            background: rgba(255,255,255,.12);
+            backdrop-filter: blur(7px);
+            -webkit-backdrop-filter: blur(7px);
+            color: #FFF;
+            border-radius: 999px;
+            padding: 8px 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            margin-bottom: 24px;
+        }
+
+        .hero-tag::before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #D4805C;
+            box-shadow: 0 0 0 6px rgba(212,128,92,.22);
+            flex-shrink: 0;
+        }
+
         .hero-exames .hero-content h1 {
             font-family: 'Bricolage Grotesque', sans-serif;
             font-size: clamp(36px, 4vw, 58px);
@@ -312,19 +341,25 @@
         }
 
         .btn-primary {
-            display: inline-block;
-            padding: 14px 40px;
-            background: #BE8365;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 15px 28px;
+            background: #D4805C;
             color: white;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 999px;
             font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            transition: background 0.3s;
+            font-size: 14px;
+            font-weight: 700;
+            box-shadow: 0 12px 30px rgba(212,128,92,.35);
+            transition: background 0.3s, transform 0.3s;
         }
 
         .btn-primary:hover {
-            background: #A5634D;
+            background: #c07040;
+            transform: translateY(-2px);
         }
 
         /* ===== TECNOLOGIA E QUALIDADE ===== */
@@ -968,8 +1003,9 @@
         <section class="hero-exames">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Exames</h1>
-                    <p>Conheça a variedade de exames disponíveis para monitorar a saúde da gestante e do bebê.</p>
+                    <span class="hero-tag">EXAMES</span>
+                    <h1>Diagnóstico preciso, cuidado que acolhe.</h1>
+                    <p>Exames especializados para avaliar o desenvolvimento do seu bebê com precisão e segurança em todas as fases da gestação.</p>
                     <a href="#lista-exames" class="btn-primary">Conheça os exames</a>
                 </div>
             </div>
