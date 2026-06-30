@@ -1926,24 +1926,7 @@
     </header>
 
     <script>
-        const toggle = document.querySelector('.mobile-menu-toggle');
-        const nav = document.querySelector('.main-nav');
-
-        if (toggle) {
-            toggle.addEventListener('click', () => {
-                toggle.classList.toggle('is-open');
-                nav.classList.toggle('is-open');
-            });
-
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('header')) {
-                    toggle.classList.remove('is-open');
-                    nav.classList.remove('is-open');
-                }
-            });
-        }
-
-        // Menu mobile toggle with IDs
+        // Menu mobile toggle
         const menuToggle = document.getElementById('menuToggle');
         const mainNav = document.getElementById('mainNav');
         if (menuToggle && mainNav) {
@@ -1956,6 +1939,12 @@
                     menuToggle.classList.remove('is-open');
                     mainNav.classList.remove('is-open');
                 });
+            });
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('header')) {
+                    menuToggle.classList.remove('is-open');
+                    mainNav.classList.remove('is-open');
+                }
             });
         }
     </script>
