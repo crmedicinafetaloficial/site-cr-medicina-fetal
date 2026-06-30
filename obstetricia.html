@@ -495,6 +495,7 @@
             background-size: 110%;
             background-position: 78% center;
             background-repeat: no-repeat;
+            background-color: #140C28;
             overflow: hidden;
         }
 
@@ -630,26 +631,33 @@
 
         @media (max-width: 767px) {
             .hero-obstetricia {
-                min-height: 520px;
+                height: auto;
+                min-height: auto;
+                max-height: none;
+                padding: 80px 0 60px;
                 background-position: 74% center;
             }
 
             .hero-overlay {
                 background: linear-gradient(
                     180deg,
-                    rgba(249, 245, 240, .96) 0%,
-                    rgba(249, 245, 240, .86) 60%,
-                    rgba(249, 245, 240, .50) 100%
+                    rgba(20, 12, 40, .88) 0%,
+                    rgba(20, 12, 40, .72) 60%,
+                    rgba(20, 12, 40, .45) 100%
                 );
             }
 
+            .hero-content {
+                margin: 0 20px;
+            }
+
             .hero-content h1 {
-                font-size: 38px;
+                font-size: 34px;
                 line-height: 1.08;
             }
 
             .hero-content p {
-                font-size: 16px;
+                font-size: 15px;
             }
 
             .hero-buttons {
