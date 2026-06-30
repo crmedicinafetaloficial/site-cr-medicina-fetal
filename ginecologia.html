@@ -500,6 +500,7 @@
         .hero-ginecologia h1 { max-width: 610px; color: #FFF; font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(36px, 4vw, 58px); font-weight: 800; line-height: 1.05; letter-spacing: -0.04em; margin-bottom: 24px; }
         .hero-ginecologia p { max-width: 580px; color: rgba(255,255,255,.92); font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 300; line-height: 1.65; margin-bottom: 30px; }
         .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 0; }
+        .mob-br { display: none; }
         .btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 9px; background: #7C4DFF; color: #FFF; padding: 15px 28px; border-radius: 999px; font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 700; text-decoration: none; box-shadow: 0 12px 30px rgba(124,77,255,.35); transition: .3s; }
         .btn-primary:hover { background: #6941E8; transform: translateY(-2px); box-shadow: 0 14px 36px rgba(124,77,255,.4); }
 
@@ -512,6 +513,7 @@
             .hero-container { padding-top: 0; }
             .hero-ginecologia h1 { font-size: clamp(28px, 5vw, 40px); }
             .hero-ginecologia p { font-size: 15px; }
+            .mob-br { display: inline; }
         }
 
         @media (max-width: 480px) {
@@ -904,7 +906,7 @@
     <section class="hero-ginecologia">
         <div class="hero-container">
             <span class="hero-tag">GINECOLOGIA</span>
-            <h1>Cuidado integral para a saúde da mulher em todas as fases da vida.</h1>
+            <h1>Cuidado integral<span class="mob-br"><br></span> para a saúde<span class="mob-br"><br></span> da mulher<span class="mob-br"><br></span> em todas as<span class="mob-br"><br></span> fases da vida.</h1>
             <p>Acompanhamento completo e humanizado em ginecologia, com foco na prevenção, diagnóstico precoce e qualidade de vida em cada etapa da saúde feminina.</p>
             <div class="hero-buttons">
                 <a href="#contato" class="btn-primary">Agendar Consulta</a>
