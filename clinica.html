@@ -378,9 +378,8 @@
         .clinica-hero {
           position: relative;
           width: 100%;
-          height: 88vh;
-          min-height: 520px;
-          max-height: 780px;
+          min-height: 760px;
+          padding: 92px 0;
           overflow: hidden;
           display: flex;
           align-items: center;
@@ -411,6 +410,35 @@
           z-index: 1;
         }
 
+        /* --- Badge --- */
+        .clinica-hero__badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          border: 1px solid rgba(255, 255, 255, 0.32);
+          background: rgba(255, 255, 255, 0.12);
+          backdrop-filter: blur(7px);
+          -webkit-backdrop-filter: blur(7px);
+          color: white;
+          border-radius: 999px;
+          padding: 8px 15px;
+          font-family: 'Poppins', sans-serif;
+          font-size: 12px;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          margin-bottom: 8px;
+        }
+
+        .clinica-hero__badge .dot {
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background: #8B5CF6;
+          box-shadow: 0 0 0 6px rgba(139, 92, 246, 0.22);
+          flex-shrink: 0;
+        }
+
         /* --- Conteúdo posicionado à esquerda --- */
         .clinica-hero__content {
           position: relative;
@@ -419,84 +447,85 @@
           width: 100%;
           margin: 0 auto;
           padding: 0 48px;
-          /* Limita o texto a ~50% da largura */
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          gap: 20px;
+          gap: 0;
         }
 
         /* --- Título principal --- */
         .clinica-hero__title {
           font-family: 'Bricolage Grotesque', sans-serif;
-          font-size: clamp(26px, 3.2vw, 46px);
+          font-size: clamp(36px, 4vw, 58px);
           font-weight: 800;
           letter-spacing: -0.04em;
           color: #ffffff;
-          line-height: 1.08;
-          margin: 0;
-          max-width: 520px;
-          text-shadow: 0 1px 6px rgba(0,0,0,0.25);
+          line-height: 1.05;
+          margin: 0 0 24px;
+          max-width: 620px;
         }
 
         /* --- Subtítulo --- */
         .clinica-hero__subtitle {
           font-family: 'Poppins', sans-serif;
-          font-size: clamp(12px, 1.1vw, 14px);
-          color: rgba(255, 255, 255, 0.88);
+          font-size: 16px;
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.92);
           line-height: 1.65;
-          margin: 0;
-          max-width: 400px;
+          margin: 0 0 30px;
+          max-width: 580px;
         }
 
         /* --- Grupo de botões --- */
         .clinica-hero__buttons {
           display: flex;
           align-items: center;
-          gap: 16px;
+          gap: 14px;
           flex-wrap: wrap;
-          margin-top: 8px;
         }
 
         /* --- Botão base --- */
         .clinica-hero__btn {
           display: inline-flex;
           align-items: center;
-          gap: 8px;
-          padding: 11px 22px;
-          border-radius: 4px;
+          justify-content: center;
+          gap: 9px;
+          padding: 15px 28px;
+          border-radius: 999px;
           font-family: 'Poppins', sans-serif;
-          font-size: 11.5px;
-          font-weight: 600;
-          letter-spacing: 0.8px;
-          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 800;
+          border: 1px solid transparent;
           text-decoration: none;
           cursor: pointer;
-          transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+          white-space: nowrap;
+          transition: all 0.3s ease;
         }
 
-        /* --- Botão 1: Agendar Consulta (outline claro) --- */
+        /* --- Botão 1: Agendar Consulta (roxo preenchido) --- */
         .clinica-hero__btn--primary {
+          background: #8B5CF6;
           color: #fff;
-          border: 1.5px solid rgba(255, 255, 255, 0.75);
-          background-color: transparent;
+          box-shadow: 0 12px 30px rgba(139, 92, 246, 0.35);
         }
 
         .clinica-hero__btn--primary:hover {
-          background-color: rgba(255, 255, 255, 0.18);
-          border-color: #fff;
+          background: #7C3AED;
+          transform: translateY(-2px);
         }
 
-        /* --- Botão 2: WhatsApp (outline igual, leve tom verde) --- */
+        /* --- Botão 2: WhatsApp (outline branco) --- */
         .clinica-hero__btn--whatsapp {
+          border-color: rgba(255, 255, 255, 0.55);
           color: #fff;
-          border: 1.5px solid rgba(255, 255, 255, 0.75);
-          background-color: transparent;
+          background: rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(8px);
         }
 
         .clinica-hero__btn--whatsapp:hover {
-          background-color: rgba(255, 255, 255, 0.18);
-          border-color: #fff;
+          background: white;
+          color: #1a0533;
+          transform: translateY(-2px);
         }
 
         /* ==============================
@@ -504,7 +533,8 @@
         ============================== */
         @media (max-width: 1024px) {
           .clinica-hero {
-            height: 75vh;
+            min-height: 680px;
+            padding: 72px 0;
           }
 
           .clinica-hero__content {
@@ -521,48 +551,44 @@
         ============================== */
         @media (max-width: 768px) {
           .clinica-hero {
-            height: auto;
-            min-height: 100svh;
-            align-items: flex-end;
+            min-height: 600px;
+            padding: 60px 0 80px;
+            align-items: center;
           }
 
-          /* No mobile o overlay cobre mais a tela de baixo para cima */
           .clinica-hero__overlay {
             background: linear-gradient(
-              to top,
-              rgba(58, 38, 28, 0.90) 0%,
-              rgba(58, 38, 28, 0.65) 50%,
-              rgba(58, 38, 28, 0.10) 100%
+              180deg,
+              rgba(58, 38, 28, 0.88) 0%,
+              rgba(58, 38, 28, 0.75) 55%,
+              rgba(58, 38, 28, 0.50) 100%
             );
           }
 
           .clinica-hero__content {
-            padding: 40px 24px 52px;
-            gap: 16px;
+            padding: 0 24px;
           }
 
           .clinica-hero__title {
-            font-size: 26px;
+            font-size: clamp(30px, 8vw, 40px);
             max-width: 100%;
           }
 
           .clinica-hero__subtitle {
-            font-size: 13px;
+            font-size: 15px;
             max-width: 100%;
           }
 
           .clinica-hero__buttons {
             flex-direction: column;
-            align-items: flex-start;
+            align-items: stretch;
             gap: 12px;
             width: 100%;
           }
 
           .clinica-hero__btn {
             width: 100%;
-            justify-content: center;
-            padding: 13px 20px;
-            font-size: 12px;
+            padding: 13px 22px;
           }
         }
 
@@ -1535,6 +1561,10 @@
       <div class="clinica-hero__overlay"></div>
       <!-- Conteúdo -->
       <div class="clinica-hero__content">
+        <div class="clinica-hero__badge">
+          <span class="dot"></span>
+          Dra Carolina Ribeiro
+        </div>
         <h1 class="clinica-hero__title">
           Excelência, acolhimento<br />
           e tecnologia para cuidar<br />
