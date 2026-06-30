@@ -735,6 +735,15 @@
                 gap: 12px;
             }
         }
+    
+        /* Submenu mobile */
+        @media (max-width: 960px) {
+            .nav-item-with-submenu { display: block; width: 100%; }
+            .nav-item-toggle { width: 100%; padding: 14px 16px; border-radius: 12px; font-size: 15px; display: flex; justify-content: space-between; align-items: center; }
+            .submenu { position: static; opacity: 1; visibility: visible; pointer-events: auto; transform: none; box-shadow: none; border: none; border-radius: 8px; padding: 4px 0; min-width: unset; background: #f9f5f2; display: none; margin: 0 0 8px; }
+            .nav-item-with-submenu.submenu-open .submenu { display: block; }
+            .nav-item-with-submenu.submenu-open .nav-item-toggle::after { transform: rotateZ(180deg); }
+        }
     </style>
 </head>
 <body>
@@ -1009,6 +1018,15 @@
                 if (e.key === 'ArrowLeft') navegarLightbox(-1);
                 if (e.key === 'ArrowRight') navegarLightbox(1);
             }
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.nav-item-toggle').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                btn.closest('.nav-item-with-submenu').classList.toggle('submenu-open');
+            });
         });
     </script>
 </body>
