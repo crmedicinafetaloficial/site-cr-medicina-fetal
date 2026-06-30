@@ -739,29 +739,33 @@
             }
         }
 
-        @media (max-width: 768px) {
+                @media (max-width: 960px) {
             .header-inner {
-                height: 60px;
+                height: 70px;
+                position: relative;
             }
-
             .logo-img { height: 44px; }
             .mobile-menu-toggle { display: flex; }
             .header-cta { display: none; }
 
+            /* Dropdown flutuante */
             .main-nav {
                 position: absolute;
                 top: calc(100% + 10px);
                 left: 0;
                 right: 0;
                 flex-direction: column;
-                background: white;
-                border: 1px solid #e0e0e0;
-                border-radius: 12px;
-                padding: 8px;
+                align-items: stretch;
                 gap: 0;
+                padding: 10px;
+                border: 1px solid rgba(13, 27, 42, 0.1);
+                border-radius: 20px;
+                background: rgba(255, 255, 255, 0.98);
+                box-shadow: 0 20px 50px rgba(13, 27, 42, 0.14);
+                backdrop-filter: blur(14px);
                 opacity: 0;
                 visibility: hidden;
-                transform: translateY(-20px);
+                transform: translateY(-8px);
                 pointer-events: none;
                 transition: 0.25s;
                 z-index: 150;
@@ -790,10 +794,22 @@
 
             .main-nav a::after { display: none; }
 
+            /* CTA visivel no final do menu mobile */
             .mobile-nav-cta {
                 display: flex !important;
                 margin-top: 8px;
+                justify-content: center;
+                background: #0D1B2A !important;
+                color: white !important;
+                font-weight: 700 !important;
+                border-radius: 12px !important;
             }
+            .mobile-nav-cta:hover {
+                background: #D4805C !important;
+            }
+        }
+
+        @media (max-width: 768px) {
 
             .site-footer {
                 padding: 40px 24px 30px;
@@ -1092,31 +1108,26 @@
         </div>
     </footer>
 
-    <script>
-        const toggle = document.querySelector('.mobile-menu-toggle');
-        const nav = document.querySelector('.main-nav');
-
-        if (toggle) {
-            toggle.addEventListener('click', () => {
-                toggle.classList.toggle('is-open');
-                nav.classList.toggle('is-open');
+        <script>
+        // Menu mobile toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('is-open');
+                mainNav.classList.toggle('is-open');
             });
-
-            // Fechar menu ao clicar em um link
-            nav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!link.classList.contains('nav-item-toggle')) {
-                        toggle.classList.remove('is-open');
-                        nav.classList.remove('is-open');
-                    }
+            mainNav.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => {
+                    if (a.classList.contains('nav-item-toggle')) return;
+                    menuToggle.classList.remove('is-open');
+                    mainNav.classList.remove('is-open');
                 });
             });
-
-            // Fechar menu ao clicar fora
             document.addEventListener('click', (e) => {
                 if (!e.target.closest('header')) {
-                    toggle.classList.remove('is-open');
-                    nav.classList.remove('is-open');
+                    menuToggle.classList.remove('is-open');
+                    mainNav.classList.remove('is-open');
                 }
             });
         }

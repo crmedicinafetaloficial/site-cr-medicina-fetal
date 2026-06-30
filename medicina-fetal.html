@@ -811,6 +811,76 @@
             }
         }
 
+                @media (max-width: 960px) {
+            .header-inner {
+                height: 70px;
+                position: relative;
+            }
+            .logo-img { height: 44px; }
+            .mobile-menu-toggle { display: flex; }
+            .header-cta { display: none; }
+
+            /* Dropdown flutuante */
+            .main-nav {
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 10px;
+                border: 1px solid rgba(13, 27, 42, 0.1);
+                border-radius: 20px;
+                background: rgba(255, 255, 255, 0.98);
+                box-shadow: 0 20px 50px rgba(13, 27, 42, 0.14);
+                backdrop-filter: blur(14px);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-8px);
+                pointer-events: none;
+                transition: 0.25s;
+                z-index: 150;
+            }
+
+            .main-nav.is-open {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+
+            .main-nav a {
+                padding: 14px 16px;
+                border-radius: 12px;
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .main-nav a:hover {
+                background: #fdf6f2;
+                color: #D4805C;
+            }
+
+            .main-nav a::after { display: none; }
+
+            /* CTA visivel no final do menu mobile */
+            .mobile-nav-cta {
+                display: flex !important;
+                margin-top: 8px;
+                justify-content: center;
+                background: #0D1B2A !important;
+                color: white !important;
+                font-weight: 700 !important;
+                border-radius: 12px !important;
+            }
+            .mobile-nav-cta:hover {
+                background: #D4805C !important;
+            }
+        }
+
         /* ══════════════════════════════════
            RESPONSIVO — MOBILE (768px)
         ══════════════════════════════════ */
@@ -856,61 +926,6 @@
             .cta-button {
                 padding: 13px 26px;
                 font-size: 13px;
-            }
-
-            .header-inner {
-                height: 60px;
-            }
-
-            .logo-img { height: 44px; }
-            .mobile-menu-toggle { display: flex; }
-            .header-cta { display: none; }
-
-            .main-nav {
-                position: absolute;
-                top: calc(100% + 10px);
-                left: 0;
-                right: 0;
-                flex-direction: column;
-                background: white;
-                border: 1px solid #e0e0e0;
-                border-radius: 12px;
-                padding: 8px;
-                gap: 0;
-                opacity: 0;
-                visibility: hidden;
-                transform: translateY(-20px);
-                pointer-events: none;
-                transition: 0.25s;
-                z-index: 150;
-            }
-
-            .main-nav.is-open {
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-                pointer-events: auto;
-            }
-
-            .main-nav a {
-                padding: 14px 16px;
-                border-radius: 12px;
-                font-size: 15px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            .main-nav a:hover {
-                background: #fdf6f2;
-                color: #D4805C;
-            }
-
-            .main-nav a::after { display: none; }
-
-            .mobile-nav-cta {
-                display: flex !important;
-                margin-top: 8px;
             }
 
             .mf-atuacao {
