@@ -983,7 +983,7 @@
 
             nav.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
-                    if (link.href !== '#') {
+                    if (!link.classList.contains('nav-item-toggle')) {
                         toggle.classList.remove('is-open');
                         nav.classList.remove('is-open');
                     }

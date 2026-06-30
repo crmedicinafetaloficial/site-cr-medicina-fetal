@@ -1945,6 +1945,7 @@
             });
             mainNav.querySelectorAll('a').forEach(a => {
                 a.addEventListener('click', () => {
+                    if (a.classList.contains('nav-item-toggle')) return;
                     menuToggle.classList.remove('is-open');
                     mainNav.classList.remove('is-open');
                 });
