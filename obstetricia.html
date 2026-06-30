@@ -579,14 +579,17 @@
         .btn-primary {
             display: inline-flex;
             align-items: center;
-            padding: 18px 34px;
+            justify-content: center;
+            gap: 9px;
+            padding: 15px 28px;
             background: #7C4DFF;
             color: #FFF;
-            border-radius: 60px;
+            border-radius: 999px;
             text-decoration: none;
             font-family: 'Poppins', sans-serif;
-            font-size: 18px;
+            font-size: 14px;
             font-weight: 700;
+            box-shadow: 0 12px 30px rgba(124, 77, 255, 0.35);
             transition: .3s;
         }
 
@@ -654,21 +657,28 @@
             }
 
             .hero-content h1 {
-                font-size: 34px;
+                font-size: clamp(28px, 5vw, 40px);
                 line-height: 1.08;
             }
 
             .hero-content p {
                 font-size: 15px;
             }
+        }
 
-            .hero-buttons {
-                flex-direction: column;
+        @media (max-width: 480px) {
+            .hero-obstetricia {
+                min-height: 480px;
+                padding: 50px 0 60px;
             }
 
-            .hero-buttons a {
-                width: 100%;
-                text-align: center;
+            .hero-content h1 {
+                font-size: clamp(26px, 4vw, 36px);
+                margin-bottom: 16px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
             }
         }
 
@@ -1053,10 +1063,7 @@
             </p>
             <div class="hero-buttons">
                 <a href="#contato" class="btn-primary">
-                    Agendar consulta
-                </a>
-                <a href="https://wa.me/5521970737523" class="btn-secondary">
-                    Falar no WhatsApp
+                    Agendar Consulta
                 </a>
             </div>
         </div>
