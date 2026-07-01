@@ -1441,21 +1441,28 @@
         }
 
         .cta-button {
-            display: inline-block;
-            padding: 14px 40px;
-            background-color: #ff9973;
-            color: white !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            padding: 15px 36px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            border: 1px solid transparent;
             text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            white-space: nowrap;
+            background: #0D1B2A;
+            color: white !important;
+            box-shadow: 0 12px 30px rgba(13, 27, 42, 0.35);
+            transition: all 0.3s ease;
         }
 
         .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            background-color: #ff7f56;
+            background: #1a2f47;
+            transform: translateY(-2px);
+            box-shadow: 0 16px 36px rgba(13, 27, 42, 0.45);
         }
 
         /* FOOTER */
