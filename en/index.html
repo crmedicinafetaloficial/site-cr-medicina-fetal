@@ -214,19 +214,29 @@
 
         /* â”€â”€ BotÃ£o CTA desktop â”€â”€ */
         .header-cta {
-            text-decoration: none;
-            padding: 10px 20px;
-            background: #D4805C;
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 26px;
+            background: #0D1B2A;
             color: white;
-            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
             font-size: 13px;
-            font-weight: 600;
-            transition: background 0.3s;
+            font-weight: 700;
+            border-radius: 999px;
+            text-decoration: none;
+            letter-spacing: 0.01em;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(13, 27, 42, 0.18);
             white-space: nowrap;
         }
 
         .header-cta:hover {
-            background: #c87941;
+            background: #D4805C;
+            box-shadow: 0 10px 28px rgba(212, 128, 92, 0.35);
+            transform: translateY(-1px);
         }
 
         /* â”€â”€ Language switcher â”€â”€ */
