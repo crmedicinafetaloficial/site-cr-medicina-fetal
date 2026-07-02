@@ -34,6 +34,12 @@
         .submenu a:hover {background-color: #f5f0e8; color: #D4805C;}
         .mobile-nav-cta {display: none;}
         .header-cta {text-decoration: none; padding: 10px 20px; background: #D4805C; color: white; border-radius: 8px; font-size: 13px; font-weight: 600; transition: background 0.3s;}
+        
+        .lang-switcher { display: flex; align-items: center; gap: 2px; border: 1px solid rgba(13,27,42,0.12); border-radius: 999px; padding: 4px; background: rgba(255,255,255,0.7); flex-shrink: 0; }
+        .lang-btn { display: inline-flex; align-items: center; gap: 5px; font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600; color: #0D1B2A; text-decoration: none; padding: 5px 11px; border-radius: 999px; transition: all 0.2s; opacity: 0.45; white-space: nowrap; }
+        .lang-btn.active { background: #0D1B2A; color: white; opacity: 1; }
+        .lang-btn:hover:not(.active) { opacity: 0.75; }
+        @media (max-width: 960px) { .lang-switcher { display: none; } }
         .header-cta:hover {background: #c87941;}
         .mobile-menu-toggle {display: none; flex-direction: column; background: none; border: none; cursor: pointer; gap: 6px; z-index: 160;}
         .mobile-menu-toggle span {width: 24px; height: 2px; background: #0D1B2A; border-radius: 2px; transition: 0.3s;}
@@ -228,6 +234,10 @@
                     <a href="blog.html">Blog</a>
                     <a href="contato.html" class="mobile-nav-cta">Agendar Consulta</a>
                 </nav>
+                <div class="lang-switcher">
+                    <a href="ultrassonografia-obstetrica-com-dopplerfluxometria.html" class="lang-btn active"><img src="https://flagcdn.com/20x15/br.png" width="20" height="15" alt="BR"> PT</a>
+                    <a href="en/obstetric-ultrasound-doppler.html" class="lang-btn"><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US"> EN</a>
+                </div>
                 <a href="contato.html" class="header-cta">📅 Agendar Consulta</a>
                 <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
             </div>
