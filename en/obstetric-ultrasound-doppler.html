@@ -214,6 +214,14 @@
         </div>
     </main>
 
+    <div class="lightbox" id="lightbox" onclick="fecharLightbox(event)">
+        <button class="lightbox__fechar" onclick="fecharLightbox()" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="28" height="28"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        <button class="lightbox__nav lightbox__nav--prev" onclick="navegarLightbox(-1)" aria-label="Previous"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <div class="lightbox__conteudo"><img id="lightbox-img" src="" alt="" /></div>
+        <button class="lightbox__nav lightbox__nav--next" onclick="navegarLightbox(1)" aria-label="Next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><polyline points="9 18 15 12 9 6"/></svg></button>
+        <span class="lightbox__contador" id="lightbox-contador"></span>
+    </div>
+
     <footer>
         <div class="site-footer">
             <div class="footer-container">
@@ -270,6 +278,58 @@
             </div>
         </div>
     </footer>
+
+    <script>
+      // ==============================
+      //  LIGHTBOX – pure JS logic
+      // ==============================
+      const fotos = [
+        { src: '../images/doppler-us-1.webp', alt: 'Obstetric Ultrasound 1' },
+        { src: '../images/doppler-us-2.webp', alt: 'Obstetric Ultrasound 2' },
+        { src: '../images/doppler-us-3.webp', alt: 'Obstetric Ultrasound 3' },
+        { src: '../images/doppler-us-4.webp', alt: 'Obstetric Ultrasound 4' },
+        { src: '../images/doppler-us-5.webp', alt: 'Obstetric Ultrasound 5' },
+        { src: '../images/doppler-us-6.webp', alt: 'Obstetric Ultrasound 6' },
+        { src: '../images/doppler-us-7.webp', alt: 'Obstetric Ultrasound 7' }
+      ];
+
+      let indiceAtual = 0;
+
+      function abrirLightbox(indice) {
+        indiceAtual = indice;
+        atualizarLightbox();
+        document.getElementById('lightbox').classList.add('ativo');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function fecharLightbox(event) {
+        if (event && event.target !== document.getElementById('lightbox')) return;
+        document.getElementById('lightbox').classList.remove('ativo');
+        document.body.style.overflow = '';
+      }
+
+      function navegarLightbox(direcao) {
+        indiceAtual = (indiceAtual + direcao + fotos.length) % fotos.length;
+        atualizarLightbox();
+      }
+
+      function atualizarLightbox() {
+        const foto = fotos[indiceAtual];
+        const img = document.getElementById('lightbox-img');
+        img.src = foto.src;
+        img.alt = foto.alt;
+        document.getElementById('lightbox-contador').textContent =
+          (indiceAtual + 1) + ' / ' + fotos.length;
+      }
+
+      document.addEventListener('keydown', function(e) {
+        const lb = document.getElementById('lightbox');
+        if (!lb.classList.contains('ativo')) return;
+        if (e.key === 'Escape')      { lb.classList.remove('ativo'); document.body.style.overflow = ''; }
+        if (e.key === 'ArrowLeft')   navegarLightbox(-1);
+        if (e.key === 'ArrowRight')  navegarLightbox(1);
+      });
+    </script>
 
     <script>
         const menuToggle = document.getElementById('menuToggle');

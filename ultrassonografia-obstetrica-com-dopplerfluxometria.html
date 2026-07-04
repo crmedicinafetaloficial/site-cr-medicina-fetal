@@ -343,6 +343,58 @@
         </div>
     </footer>
 
+    <script>
+      // ==============================
+      //  LIGHTBOX – lógica pura JS
+      // ==============================
+      const fotos = [
+        { src: 'images/doppler-us-1.webp', alt: 'Ultrassonografia Obstétrica 1' },
+        { src: 'images/doppler-us-2.webp', alt: 'Ultrassonografia Obstétrica 2' },
+        { src: 'images/doppler-us-3.webp', alt: 'Ultrassonografia Obstétrica 3' },
+        { src: 'images/doppler-us-4.webp', alt: 'Ultrassonografia Obstétrica 4' },
+        { src: 'images/doppler-us-5.webp', alt: 'Ultrassonografia Obstétrica 5' },
+        { src: 'images/doppler-us-6.webp', alt: 'Ultrassonografia Obstétrica 6' },
+        { src: 'images/doppler-us-7.webp', alt: 'Ultrassonografia Obstétrica 7' }
+      ];
+
+      let indiceAtual = 0;
+
+      function abrirLightbox(indice) {
+        indiceAtual = indice;
+        atualizarLightbox();
+        document.getElementById('lightbox').classList.add('ativo');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function fecharLightbox(event) {
+        if (event && event.target !== document.getElementById('lightbox')) return;
+        document.getElementById('lightbox').classList.remove('ativo');
+        document.body.style.overflow = '';
+      }
+
+      function navegarLightbox(direcao) {
+        indiceAtual = (indiceAtual + direcao + fotos.length) % fotos.length;
+        atualizarLightbox();
+      }
+
+      function atualizarLightbox() {
+        const foto = fotos[indiceAtual];
+        const img = document.getElementById('lightbox-img');
+        img.src = foto.src;
+        img.alt = foto.alt;
+        document.getElementById('lightbox-contador').textContent =
+          (indiceAtual + 1) + ' / ' + fotos.length;
+      }
+
+      document.addEventListener('keydown', function(e) {
+        const lb = document.getElementById('lightbox');
+        if (!lb.classList.contains('ativo')) return;
+        if (e.key === 'Escape')      { lb.classList.remove('ativo'); document.body.style.overflow = ''; }
+        if (e.key === 'ArrowLeft')   navegarLightbox(-1);
+        if (e.key === 'ArrowRight')  navegarLightbox(1);
+      });
+    </script>
+
         <script>
         // Menu mobile toggle
         const menuToggle = document.getElementById('menuToggle');
