@@ -1521,13 +1521,16 @@
             background-color: #000;
         }
 
-        .video-container iframe {
+        .video-container iframe,
+        .video-container video,
+        .video-container img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             border: none;
+            object-fit: cover;
         }
 
         .video-title {
@@ -2328,11 +2331,11 @@
         <h2 class="section-title">4D HD Live Videos</h2>
         <div class="videos-grid">
             <div class="video-item">
-                <div class="video-container">
-                    <video autoplay muted loop playsinline>
-                        <source src="../images/exame-circulacao-fetal.webm" type="video/webm">
-                        <source src="../images/exame-circulacao-fetal.mp4" type="video/mp4">
-                    </video>
+                <div class="video-container" id="video-fetal-circulation">
+                    <img src="../images/exame-circulacao-fetal-poster.webp" alt="Fetal Circulation" loading="lazy" width="800" height="422">
+                    <button class="video-facade-play" aria-label="Play video" onclick="playLocalVideoFacade('video-fetal-circulation')">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+                    </button>
                 </div>
                 <div class="video-title">Fetal Circulation</div>
             </div>
@@ -2356,6 +2359,19 @@
         iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
         el.innerHTML = '';
         el.appendChild(iframe);
+    }
+
+    function playLocalVideoFacade(containerId) {
+        var el = document.getElementById(containerId);
+        var video = document.createElement('video');
+        video.controls = true;
+        video.autoplay = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.innerHTML = '<source src="../images/exame-circulacao-fetal.webm" type="video/webm">' +
+            '<source src="../images/exame-circulacao-fetal.mp4" type="video/mp4">';
+        el.innerHTML = '';
+        el.appendChild(video);
     }
     </script>
 
