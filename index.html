@@ -1540,6 +1540,30 @@
             color: var(--dark-gray);
         }
 
+        .video-facade-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.6);
+            border: 2px solid #fff;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            z-index: 2;
+        }
+
+        .video-facade-play:hover {
+            background: var(--primary-color);
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+
         /* CTA SECTION */
         .cta-section {
             padding: 60px 40px;
@@ -2287,13 +2311,27 @@
                 <div class="video-title">Circulação Fetal</div>
             </div>
             <div class="video-item">
-                <div class="video-container">
-                    <iframe src="https://player.vimeo.com/video/311766606?autoplay=0&loop=0&autopause=1" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <div class="video-container" id="video-coracao-fetal">
+                    <img src="https://vumbnail.com/311766606.jpg" alt="Coração Fetal" loading="lazy">
+                    <button class="video-facade-play" aria-label="Reproduzir vídeo" onclick="playVimeoFacade('video-coracao-fetal', '311766606')">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+                    </button>
                 </div>
                 <div class="video-title">Coração Fetal</div>
             </div>
         </div>
     </section>
+
+    <script>
+    function playVimeoFacade(containerId, vimeoId) {
+        var el = document.getElementById(containerId);
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://player.vimeo.com/video/' + vimeoId + '?autoplay=1&loop=0&autopause=1';
+        iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+        el.innerHTML = '';
+        el.appendChild(iframe);
+    }
+    </script>
 
     <!-- CTA FINAL -->
     <section class="cta-section">
