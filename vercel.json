@@ -10,5 +10,1030 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/a-gravidez-nao-evoluiu-abortamento-retido-o-que-fazer",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/a-gravidez-nao-evoluiu-abortamento-retido-o-que-fazer",
+      "permanent": true
+    },
+    {
+      "source": "/a-importancia-da-primeira-ultrassonografia-da-gestacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/a-importancia-da-primeira-ultrassonografia-da-gestacao",
+      "permanent": true
+    },
+    {
+      "source": "/a-morfologica-detecta-sindrome-de-down",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/a-morfologica-detecta-sindrome-de-down",
+      "permanent": true
+    },
+    {
+      "source": "/a-transluscencia-nucal-do-meu-bebe-esta-aumentada-e-agora",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/a-transluscencia-nucal-do-meu-bebe-esta-aumentada-e-agora",
+      "permanent": true
+    },
+    {
+      "source": "/alto-risco-para-sindromes-aneuploidias-como-proceder",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/alto-risco-para-sindromes-aneuploidias-como-proceder",
+      "permanent": true
+    },
+    {
+      "source": "/arteria-uterina-com-incisura-ao-doppler-tenho-que-me-preocupar",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/arteria-uterina-com-incisura-ao-doppler-tenho-que-me-preocupar",
+      "permanent": true
+    },
+    {
+      "source": "/artigos",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog",
+      "permanent": true
+    },
+    {
+      "source": "/clinica",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/clinica",
+      "permanent": true
+    },
+    {
+      "source": "/como-saber-a-minha-idade-gestacional",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/como-saber-a-minha-idade-gestacional",
+      "permanent": true
+    },
+    {
+      "source": "/como-saber-se-estou-em-trabalho-de-parto",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/como-saber-se-estou-em-trabalho-de-parto",
+      "permanent": true
+    },
+    {
+      "source": "/como-saber-se-eu-estou-ovulando",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/como-saber-se-eu-estou-ovulando",
+      "permanent": true
+    },
+    {
+      "source": "/contato",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/contato",
+      "permanent": true
+    },
+    {
+      "source": "/de-quanto-em-quanto-tempo-preciso-fazer-ultrassonografia-na-gestacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/de-quanto-em-quanto-tempo-preciso-fazer-ultrassonografia-na-gestacao",
+      "permanent": true
+    },
+    {
+      "source": "/dracarolina",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/perfil",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog",
+      "permanent": true
+    },
+    {
+      "source": "/en/clinic",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/clinica",
+      "permanent": true
+    },
+    {
+      "source": "/en/contact",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/contato",
+      "permanent": true
+    },
+    {
+      "source": "/en/exams",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/exames",
+      "permanent": true
+    },
+    {
+      "source": "/en/exams/1-trimester-screening",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/1st-trimester-morphology",
+      "permanent": true
+    },
+    {
+      "source": "/en/exams/3d-4d-ultrasound",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/3d-4d-ultrasound",
+      "permanent": true
+    },
+    {
+      "source": "/en/exams/anomaly-scan",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/2nd-trimester-morphology",
+      "permanent": true
+    },
+    {
+      "source": "/en/exams/basal-cardiotocography",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/cardiotocography",
+      "permanent": true
+    },
+    {
+      "source": "/en/exams/biophysical-profile",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/foetal-biophysical-profile",
+      "permanent": true
+    },
+    {
+      "source": "/en/exams/cervical-length",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/cervical-length-measurement",
+      "permanent": true
+    },
+    {
+      "source": "/en/exams/follicle-tracking-ultrasound-scans",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/serial-ultrasound",
+      "permanent": true
+    },
+    {
+      "source": "/en/exams/growth-scan",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/obstetric-ultrasound-doppler",
+      "permanent": true
+    },
+    {
+      "source": "/en/exams/gynecological-scan",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/gynaecological-ultrasound",
+      "permanent": true
+    },
+    {
+      "source": "/en/exams/invasive-diagnostic-tests",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/invasive-diagnostic-tests",
+      "permanent": true
+    },
+    {
+      "source": "/en/exams/viability",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/viability-scan",
+      "permanent": true
+    },
+    {
+      "source": "/en/fetal-medicine",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/medicina-fetal",
+      "permanent": true
+    },
+    {
+      "source": "/en/gynecology",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/ginecologia",
+      "permanent": true
+    },
+    {
+      "source": "/en/home-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en",
+      "permanent": true
+    },
+    {
+      "source": "/en/home-2-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en",
+      "permanent": true
+    },
+    {
+      "source": "/en/how-to-know-if-im-in-labor",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/como-saber-se-estou-em-trabalho-de-parto",
+      "permanent": true
+    },
+    {
+      "source": "/en/maintenance-page-english",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en",
+      "permanent": true
+    },
+    {
+      "source": "/en/obstetrics",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/obstetricia",
+      "permanent": true
+    },
+    {
+      "source": "/en/profile",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/en/perfil",
+      "permanent": true
+    },
+    {
+      "source": "/estou-com-pouco-liquido-o-que-faco-sera-que-perdi-sem-perceber",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/estou-com-pouco-liquido-o-que-faco-sera-que-perdi-sem-perceber",
+      "permanent": true
+    },
+    {
+      "source": "/exames",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/exames",
+      "permanent": true
+    },
+    {
+      "source": "/exames/cardiotocografia-basal",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/cardiotocografia-basal",
+      "permanent": true
+    },
+    {
+      "source": "/exames/medida-de-comprimento-do-colo",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/medida-de-comprimento-do-colo",
+      "permanent": true
+    },
+    {
+      "source": "/exames/morfologico-1o-trimestre",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/morfologico-1o-trimestre",
+      "permanent": true
+    },
+    {
+      "source": "/exames/morfologico-2o-trimestre",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/morfologico-2o-trimestre",
+      "permanent": true
+    },
+    {
+      "source": "/exames/perfil-biofisico-fetal",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/perfil-biofisico-fetal",
+      "permanent": true
+    },
+    {
+      "source": "/exames/testes-diagnosticos-invasivos",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/testes-diagnosticos-invasivos",
+      "permanent": true
+    },
+    {
+      "source": "/exames/ultrassonografia-ginecologica",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/ultrassonografia-ginecologica",
+      "permanent": true
+    },
+    {
+      "source": "/exames/ultrassonografia-obstetrica-com-dopplerfluxometria",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/ultrassonografia-obstetrica-com-dopplerfluxometria",
+      "permanent": true
+    },
+    {
+      "source": "/exames/ultrassonografia-seriada",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/ultrassonografia-seriada",
+      "permanent": true
+    },
+    {
+      "source": "/exames/us-3d-e-4d",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/ultrassom-3d-4d",
+      "permanent": true
+    },
+    {
+      "source": "/exames/viabilidade",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/viabilidade",
+      "permanent": true
+    },
+    {
+      "source": "/existe-idade-gestacional-ideal-para-realizar-ultrassonografia-3d",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/existe-idade-gestacional-ideal-para-realizar-ultrassonografia-3d",
+      "permanent": true
+    },
+    {
+      "source": "/existe-morfologica-de-3o-t-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/existe-morfologica-de-3o-t-2",
+      "permanent": true
+    },
+    {
+      "source": "/existe-ultrassonografia-5d",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/existe-ultrassonografia-5d",
+      "permanent": true
+    },
+    {
+      "source": "/faqs",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/",
+      "permanent": true
+    },
+    {
+      "source": "/galeria-de-imagens",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/",
+      "permanent": true
+    },
+    {
+      "source": "/galery-images",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/",
+      "permanent": true
+    },
+    {
+      "source": "/gestacao-ectopica-gestacao-tubaria",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/gestacao-ectopica-gestacao-tubaria",
+      "permanent": true
+    },
+    {
+      "source": "/ginecologia",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/ginecologia",
+      "permanent": true
+    },
+    {
+      "source": "/inicio-teste",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/",
+      "permanent": true
+    },
+    {
+      "source": "/medicina-fetal",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/medicina-fetal",
+      "permanent": true
+    },
+    {
+      "source": "/meu-bebe-esta-pequeno-baixo-peso-fetal-e-agora",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/meu-bebe-esta-pequeno-baixo-peso-fetal-e-agora",
+      "permanent": true
+    },
+    {
+      "source": "/nao-ouvi-o-batimento-do-bebe-e-agora",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/nao-ouvi-o-batimento-do-bebe-e-agora",
+      "permanent": true
+    },
+    {
+      "source": "/nao-vi-o-osso-nasal-e-problema",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/nao-vi-o-osso-nasal-e-problema",
+      "permanent": true
+    },
+    {
+      "source": "/o-que-e-cerclagem-sera-que-preciso-disso",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/o-que-e-cerclagem-sera-que-preciso-disso",
+      "permanent": true
+    },
+    {
+      "source": "/o-que-e-e-como-e-feita-a-biopsia-de-vilo-corial-bvc",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/o-que-e-e-como-e-feita-a-biopsia-de-vilo-corial-bvc",
+      "permanent": true
+    },
+    {
+      "source": "/o-que-e-nipt",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/o-que-e-nipt",
+      "permanent": true
+    },
+    {
+      "source": "/o-que-e-o-exame-de-perfil-biofisico-fetal",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/o-que-e-o-exame-de-perfil-biofisico-fetal",
+      "permanent": true
+    },
+    {
+      "source": "/o-que-e-percentil-de-peso-fetal",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/o-que-e-percentil-de-peso-fetal",
+      "permanent": true
+    },
+    {
+      "source": "/o-que-e-translucencia-nucal-tn",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/o-que-e-translucencia-nucal-tn",
+      "permanent": true
+    },
+    {
+      "source": "/o-que-preciso-saber-antes-de-fazer-usg-3d-4d-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/o-que-preciso-saber-antes-de-fazer-usg-3d-4d-2",
+      "permanent": true
+    },
+    {
+      "source": "/obstetricia",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/obstetricia",
+      "permanent": true
+    },
+    {
+      "source": "/para-que-serve-a-morfologica-de-2o-t",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/para-que-serve-a-morfologica-de-2o-t",
+      "permanent": true
+    },
+    {
+      "source": "/para-que-serve-a-ultrassonografia-seriada",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/para-que-serve-a-ultrassonografia-seriada",
+      "permanent": true
+    },
+    {
+      "source": "/para-que-serve-o-acompanhamento-pre-natal-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/para-que-serve-o-acompanhamento-pre-natal-2",
+      "permanent": true
+    },
+    {
+      "source": "/para-que-serve-o-exame-de-cardiotocografia",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/para-que-serve-o-exame-de-cardiotocografia",
+      "permanent": true
+    },
+    {
+      "source": "/para-que-serve-o-morfologico-de-1o-t",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/para-que-serve-o-morfologico-de-1o-t",
+      "permanent": true
+    },
+    {
+      "source": "/para-que-servem-as-dosagens-de-betahcg-fracao-livre-papp-a-e-plgf",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/para-que-servem-as-dosagens-de-betahcg-fracao-livre-papp-a-e-plgf",
+      "permanent": true
+    },
+    {
+      "source": "/perfil",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/perfil",
+      "permanent": true
+    },
+    {
+      "source": "/placenta-baixa-o-que-preciso-saber",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/placenta-baixa-o-que-preciso-saber",
+      "permanent": true
+    },
+    {
+      "source": "/politica-de-privacidade",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/politica-de-privacidade",
+      "permanent": true
+    },
+    {
+      "source": "/por-que-fazer-exame-com-profissional-certificado-pela-fetal-medicine-foundationfmf",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/por-que-fazer-exame-com-profissional-certificado-pela-fetal-medicine-foundationfmf",
+      "permanent": true
+    },
+    {
+      "source": "/preciso-fazer-exame-transvaginal-na-morfologica-de-2o-t",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/preciso-fazer-exame-transvaginal-na-morfologica-de-2o-t",
+      "permanent": true
+    },
+    {
+      "source": "/qual-a-diferenca-entre-transluscencia-nucal-tn-e-morfologico-de-1o-trimestre-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/qual-a-diferenca-entre-transluscencia-nucal-tn-e-morfologico-de-1o-trimestre-2",
+      "permanent": true
+    },
+    {
+      "source": "/quando-fazer-a-morfologica-de-2o-t",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/quando-fazer-a-morfologica-de-2o-t",
+      "permanent": true
+    },
+    {
+      "source": "/quando-fazer-a-primeira-ultrassonografia-na-gravidez",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/quando-fazer-a-primeira-ultrassonografia-na-gravidez",
+      "permanent": true
+    },
+    {
+      "source": "/quando-iniciar-o-controle-de-ovulacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/quando-iniciar-o-controle-de-ovulacao",
+      "permanent": true
+    },
+    {
+      "source": "/sao-gemeos-o-que-preciso-saber",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/sao-gemeos-o-que-preciso-saber",
+      "permanent": true
+    },
+    {
+      "source": "/tenho-muito-liquido-e-ruim",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/tenho-muito-liquido-e-ruim",
+      "permanent": true
+    },
+    {
+      "source": "/teste-de-gravidez-positivo-e-agora",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/teste-de-gravidez-positivo-e-agora",
+      "permanent": true
+    },
+    {
+      "source": "/tive-alto-risco-para-pre-eclampsia-o-que-fazer",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/tive-alto-risco-para-pre-eclampsia-o-que-fazer",
+      "permanent": true
+    },
+    {
+      "source": "/tive-diagnostico-de-malformacao-fetal-o-que-fazer",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/tive-diagnostico-de-malformacao-fetal-o-que-fazer",
+      "permanent": true
+    },
+    {
+      "source": "/vou-saber-o-sexo-do-meu-bebe-na-morfologica-de-primeiro-trimestre",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crmedicinafetal.com"
+        }
+      ],
+      "destination": "https://www.crmedicinafetal.com.br/blog/vou-saber-o-sexo-do-meu-bebe-na-morfologica-de-primeiro-trimestre",
+      "permanent": true
+    }
   ]
 }
