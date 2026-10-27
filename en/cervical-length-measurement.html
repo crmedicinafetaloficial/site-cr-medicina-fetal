@@ -29,6 +29,14 @@
         });
       })();
     </script>
+    <script>
+    document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'',n,p;
+    if(h.indexOf('wa.me/')>-1||h.indexOf('api.whatsapp.com')>-1){n='whatsapp_click';p={whatsapp_number:(h.match(/wa\.me\/(\d+)/)||[])[1]||''};}
+    else if(h.indexOf('tel:')===0){n='phone_click';p={phone_number:h.slice(4)};}
+    else if(h.indexOf('mailto:')===0){n='email_click';p={email_address:h.slice(7).split('?')[0]};}
+    else return;
+    p.link_text=(a.textContent||'').trim().slice(0,60);p.page_path=location.pathname;gtag('event',n,p);},true);
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cervical Length Measurement - CR Medicina Fetal in Rio de Janeiro</title>
     <meta name="description" content="Cervical length ultrasound measurement, an essential exam to assess the risk of preterm birth. CR Medicina Fetal, Rio de Janeiro.">
